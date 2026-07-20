@@ -1,0 +1,77 @@
+.about__intro {
+  max-width: 640px;
+  color: var(--text-dim);
+  font-size: 17px;
+  margin-bottom: 56px;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.edu-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.edu-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.edu-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.edu-card__head h3 {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.edu-card__period {
+  font-size: 13px;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.edu-card__loc {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-faint);
+  margin-top: 8px;
+}
+
+.edu-card__degree {
+  margin-top: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.edu-card .pill {
+  margin-top: 12px;
+}
+
+.edu-card__detail {
+  margin-top: 14px;
+  font-size: 13.5px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+}

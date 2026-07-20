@@ -1,0 +1,163 @@
+export const profile = {
+  name: "Srishti Chauhan",
+  title: "Risk Analytics & AI Enthusiast",
+  location: "New York, NY",
+  email: "sc5824@columbia.edu",
+  phone: "+1 (332) 260-1923",
+  linkedin: "https://linkedin.com",
+  github: "https://github.com",
+  tagline:
+    "Enterprise Risk Management graduate student blending financial risk modeling with AI, machine learning, and full-stack product development.",
+};
+
+export const education = [
+  {
+    school: "Columbia University",
+    location: "New York, United States",
+    degree: "Master of Science, Enterprise Risk Management",
+    note: "F-1, Three-Year STEM OPT Eligible",
+    period: "2025 - 2026",
+    details: [
+      "Coursework: Financial Risk Management, Financial Modeling, Capital Markets and Investments, Portfolio Management, Operational Risk, Quantitative Risk Analytics, IT Risk, Regulatory Reporting",
+      "Certifications: Bloomberg Market Concepts (BMC) · Financial Markets, Yale University (Coursera) · Statistics for Data Science with Python, IBM",
+    ],
+  },
+  {
+    school: "SRM Institute of Science and Technology",
+    location: "Chennai, India",
+    degree: "Bachelor of Technology, Computer Science and Information Technology",
+    note: "CGPA 3.5 (Dean's List)",
+    period: "2020 - 2024",
+    details: [
+      "Technical Focus: Machine Learning, AI Modeling, Predictive Modeling, Generative AI, NLP and LLMs, Statistical Modeling",
+    ],
+  },
+];
+
+export const experience = [
+  {
+    company: "ABFinance",
+    location: "New York, USA",
+    role: "Platform Risk Intern",
+    period: "May 2026 - Jun 2026",
+    bullets: [
+      "Served as Platform Risk Intern, leading risk strategy and controls design with the team in support of the U.S. market entry and September 2026 launch.",
+      "Executed RCSA across core platform functions, identifying operational risk exposures, documenting control gaps, and driving remediation aligned with ERM standards.",
+      "Led risk control design and implementation, defining control objectives, testing effectiveness, and ensuring alignment with regulatory and operational risk frameworks.",
+      "Conducted TPRM assessments, evaluating vendor SOC 2 compliance, code quality standards, and third-party infrastructure dependencies including bridges and cloud providers.",
+      "Assessed and quantified third-party concentration risk, applying TPRM frameworks to map exposure and develop targeted mitigation strategies.",
+      "Developed real-time risk dashboards enabling the risk team to track, monitor, and escalate platform risk exposure with structured reporting to senior leadership.",
+    ],
+  },
+  {
+    company: "Leadsquared",
+    location: "Bangalore, India",
+    role: "Business Analyst",
+    period: "Jun 2024 - May 2025",
+    bullets: [
+      "Led 5+ end-to-end enterprise CRM implementations (including Physics Wallah) by developing automated workflow controls that reduced operational risk by 30% and minimized data-entry errors across high-volume accounts.",
+      "Mitigated credit and churn risk for distressed accounts through structured resolution frameworks and custom API integrations, restoring client satisfaction and preventing revenue loss.",
+      "Built real-time SQL dashboards and CRM reporting tools to improve lead lifecycle visibility, increasing conversion rates by 25% for sales leadership.",
+      "Executed 5+ HIPAA-compliant healthcare implementations, ensuring workflows met regulatory and security requirements while onboarding 10+ U.S. enterprise accounts.",
+    ],
+  },
+  {
+    company: "Indian Space Research Organisation (ISRO)",
+    location: "Remote, India",
+    role: "Data Analyst Intern",
+    period: "Jan 2023 - Sep 2023",
+    bullets: [
+      "Built a remote-sensing predictive framework using JavaScript and Google Earth Engine (GEE), improving agricultural risk forecasting accuracy by 15% with Sentinel-2 satellite imagery.",
+      "Applied supervised ML models to NDVI and multi-year temporal datasets for crop yield forecasting and commodity risk analysis.",
+    ],
+  },
+  {
+    company: "Council of Scientific and Industrial Research (CSIR)",
+    location: "Palampur, India",
+    role: "Machine Learning Intern",
+    period: "Aug 2022 - Sep 2022",
+    bullets: [
+      "Designed deep learning models to detect protein-ligand interactions, improving drug discovery prediction accuracy by 30%.",
+      "Applied ML algorithms to high-dimensional biological datasets, streamlining research workflows and accelerating analysis pipelines.",
+    ],
+  },
+];
+
+export const projects = [
+  {
+    title: "Systemic AI Exposure Risk in Diversified Equity Portfolios",
+    period: "2025 - 2026",
+    tech: ["Python", "Pandas", "Scikit-learn", "SQL", "Tableau"],
+    link: "#",
+    linkLabel: "GitHub",
+    bullets: [
+      "Analyzed real-time S&P 500 data across sectors to identify hidden AI-driven concentration and cross-sector dependency risks in equity portfolios.",
+      "Conducted correlation analysis and built Python visualizations to measure systemic exposure to shared AI infrastructure providers.",
+      "Modeled AI shock and crisis scenarios, estimating portfolio downside exposure of up to 69% despite sector diversification.",
+    ],
+  },
+  {
+    title: "El Niño Financial Risk Dashboard",
+    period: "2025 - 2026",
+    tech: ["Python", "NumPy", "Matplotlib", "Streamlit", "JavaScript", "Node.js", "NOAA/ERA5 Data"],
+    link: "#",
+    linkLabel: "Streamlit App",
+    bullets: [
+      "Built an interactive Streamlit dashboard to model and visualize financial risk implications of El Niño climate cycles using NOAA and ERA5 geospatial datasets.",
+      "Applied ML models and statistical risk frameworks to forecast climate-driven economic impacts, enabling scenario-based risk analysis across commodity and agricultural sectors with quantified financial exposure estimates.",
+    ],
+  },
+  {
+    title: "Circle — B2C Platform for Independent Music & Artist Collaboration",
+    period: "2023 - 2024",
+    tech: ["React", "HTML", "CSS", "JavaScript", "Figma"],
+    link: "#",
+    linkLabel: "Live App",
+    bullets: [
+      "Founded and built Circle end-to-end: designed in Figma, developed core features in React, HTML, CSS, and JavaScript.",
+      "Created creator-economy monetization models, demonstrating full-stack product development and entrepreneurial execution.",
+    ],
+  },
+  {
+    title: "CTC-Based NLP Speech Models",
+    period: "2023 - 2024",
+    tech: ["NLP", "Deep Learning", "CTC Models"],
+    link: "#",
+    linkLabel: "SAMSUNG",
+    bullets: [
+      "Developed and optimized CTC-based NLP speech models that improved transcription accuracy by 25% for large-scale unstructured text.",
+      "Applications in financial transcript analysis and sentiment analytics.",
+    ],
+  },
+];
+
+export const leadership = [
+  "Top 5 Finalist, PRMIA Risk Essay Competition",
+  "Treasurer, Columbia Investment and Finance Society (CIFS) — Oversee budgeting and financial planning for club operations and events.",
+  "Portfolio Project, CIFS — Student-managed equity portfolio covering stock screening, investment thesis development, and index benchmarking.",
+  "External Relations Manager, Columbia Risk Management Club — Lead industry outreach and engagement with risk and finance professionals.",
+  "President, Association for Computing Machinery (ACM) — Increased member engagement by 25% through structured initiatives and programming.",
+];
+
+export const skills = [
+  {
+    category: "Programming & Data",
+    items: ["Python", "SQL", "JavaScript", "Java", "R", "VBA", "HTML/CSS", "React", "Tableau", "Data Visualization"],
+  },
+  {
+    category: "AI & Analytics",
+    items: [
+      "Machine Learning", "Deep Learning", "NLP", "Generative AI", "LLMs", "PyTorch", "TensorFlow",
+      "LangChain", "RAG Pipelines", "HuggingFace", "Fine-tuning LLMs", "Prompt Engineering",
+      "Predictive Modeling", "Statistical Analysis", "Big Data Analytics", "Compliance Monitoring",
+    ],
+  },
+  {
+    category: "Risk & Frameworks",
+    items: [
+      "Financial Modeling", "IT Risk", "RCSA", "TPRM", "Control Design and Testing", "Risk Registers",
+      "SOC 2", "Business Continuity Planning", "Stress Testing", "Regulatory Reporting",
+      "NIST CSF", "NIST SP 800-53", "COBIT", "COSO", "GDPR",
+    ],
+  },
+];
