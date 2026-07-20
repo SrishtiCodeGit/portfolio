@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiArrowDown, FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
 import { profile } from '../data/resumeData';
-import profilePhoto from '../assets/profile.png';
+import profilePhoto from '../assets/profile.jpg';
 import './Hero.css';
 
 const container = {
