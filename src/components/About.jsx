@@ -9,13 +9,15 @@ export default function About() {
       <div className="container">
         <Reveal>
           <p className="section-label">About</p>
-          <h2 className="section-title">Education</h2>
+          <h2 className="section-title">About Me</h2>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <p className="about__intro">
-            Based in {profile.location}. {profile.tagline}
-          </p>
+          <p className="about__intro">{profile.intro}</p>
+        </Reveal>
+
+        <Reveal delay={0.15}>
+          <h3 className="about__subheading">Education</h3>
         </Reveal>
 
         <div className="about__grid">

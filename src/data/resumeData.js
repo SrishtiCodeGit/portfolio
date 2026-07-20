@@ -8,6 +8,8 @@ export const profile = {
   github: "https://github.com",
   tagline:
     "Enterprise Risk Management graduate student blending financial risk modeling with AI, machine learning, and full-stack product development.",
+  intro:
+    "Hey, I'm Srishti — someone who's into risk management but just as obsessed with AI and tech. I come from a tech background and love coding and turning data into decisions. I've studied financial and operational risk, gotten hands-on exposure to third-party risk management, and even ran my own startup, Circle, back in 2023. I'm a curious mind who's always willing to learn something new — exploring emerging technology while keeping up with the financial markets. (Yes, WSJ is basically my morning coffee, haha.)",
 };
 
 export const education = [

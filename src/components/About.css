@@ -1,8 +1,18 @@
 .about__intro {
-  max-width: 640px;
+  max-width: 680px;
   color: var(--text-dim);
   font-size: 17px;
+  line-height: 1.75;
   margin-bottom: 56px;
+}
+
+.about__subheading {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 24px;
 }
 
 .about__grid {
