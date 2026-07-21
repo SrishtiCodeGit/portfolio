@@ -119,7 +119,7 @@ export const projects = [
     title: "Circle — B2C Platform for Independent Music & Artist Collaboration",
     period: "2023 - 2024",
     tech: ["React", "HTML", "CSS", "JavaScript", "Figma"],
-    link: "#",
+    link: "https://the-circle-liard.vercel.app",
     linkLabel: "Live App",
     graphic: "social",
     isCircle: true,
