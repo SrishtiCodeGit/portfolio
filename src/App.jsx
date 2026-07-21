@@ -1,28 +1,29 @@
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import TickerBar from './components/TickerBar';
-import StatsStrip from './components/StatsStrip';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Leadership from './components/Leadership';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import CursorGlow from './components/CursorGlow';
+import PageTransition from './components/PageTransition';
+import Home from './pages/Home';
+import EducationDetail from './pages/EducationDetail';
+import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
+  const location = useLocation();
+
   return (
     <>
+      <CursorGlow />
+      <ScrollToTop />
       <Navbar />
-      <Hero />
-      <TickerBar />
-      <StatsStrip />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Leadership />
-      <Contact />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+          <Route path="/education/:slug" element={<PageTransition><EducationDetail /></PageTransition>} />
+          <Route path="/projects/:slug" element={<PageTransition><ProjectDetail /></PageTransition>} />
+        </Routes>
+      </AnimatePresence>
       <Footer />
     </>
   );

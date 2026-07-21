@@ -54,11 +54,20 @@
   border: 1px solid var(--border);
   border-radius: 16px;
   overflow: hidden;
-  transition: border-color 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .timeline__card:hover {
   border-color: var(--accent);
+  box-shadow: 0 14px 36px rgba(59, 91, 219, 0.16);
+}
+
+.timeline__head .logo-badge {
+  transition: transform 0.3s ease;
+}
+
+.timeline__head:hover .logo-badge {
+  transform: rotate(-6deg) scale(1.06);
 }
 
 .timeline__head {

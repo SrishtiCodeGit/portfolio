@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import TiltCard from './TiltCard';
 import { stats } from '../data/resumeData';
 import './StatsStrip.css';
 
@@ -28,15 +29,16 @@ function Stat({ value, suffix, label, delay }) {
 
   return (
     <motion.div
-      className="stat"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5, delay }}
       onViewportEnter={start}
     >
-      <span className="stat__value">{count}{suffix}</span>
-      <span className="stat__label">{label}</span>
+      <TiltCard className="stat" maxTilt={8}>
+        <span className="stat__value">{count}{suffix}</span>
+        <span className="stat__label">{label}</span>
+      </TiltCard>
     </motion.div>
   );
 }

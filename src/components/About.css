@@ -21,17 +21,24 @@
   gap: 24px;
 }
 
+.edu-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .edu-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 28px;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .edu-card:hover {
   border-color: var(--accent);
-  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(59, 91, 219, 0.18);
 }
 
 .edu-card--alma {
@@ -95,11 +102,19 @@
   margin-top: 12px;
 }
 
-.edu-card__detail {
-  margin-top: 14px;
-  font-size: 13.5px;
-  color: var(--text-dim);
-  line-height: 1.6;
+.edu-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  transition: gap 0.2s ease;
+}
+
+.edu-card:hover .edu-card__cta {
+  gap: 10px;
 }
 
 @media (max-width: 800px) {

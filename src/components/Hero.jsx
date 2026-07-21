@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FiArrowDown, FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
 import { profile } from '../data/resumeData';
 import profilePhoto from '../assets/profile.jpg';
 import './Hero.css';
+
+const MotionLink = motion.create(Link);
 
 const container = {
   hidden: {},
@@ -41,12 +44,12 @@ export default function Hero() {
             {profile.tagline}
           </motion.p>
           <motion.div variants={item} className="hero__actions">
-            <a href="#projects" className="btn btn--primary">
+            <Link to="/#projects" className="btn btn--primary">
               View Projects
-            </a>
-            <a href="#contact" className="btn btn--ghost">
+            </Link>
+            <Link to="/#contact" className="btn btn--ghost">
               Get in Touch
-            </a>
+            </Link>
           </motion.div>
           <motion.div variants={item} className="hero__socials">
             <a href={`mailto:${profile.email}`} aria-label="Email"><FiMail /></a>
@@ -70,15 +73,15 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
-      <motion.a
-        href="#about"
+      <MotionLink
+        to="/#about"
         className="hero__scroll"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
         aria-label="Scroll down"
       >
         <FiArrowDown />
-      </motion.a>
+      </MotionLink>
     </section>
   );
 }

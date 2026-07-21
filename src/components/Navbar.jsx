@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const links = [
-  { href: '#about', label: 'About' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#about', label: 'About' },
+  { href: '/#experience', label: 'Experience' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#skills', label: 'Skills' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
@@ -28,15 +29,15 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="container navbar__inner">
-        <a href="#top" className="navbar__logo">
+        <Link to="/#top" className="navbar__logo">
           SC<span>.</span>
-        </a>
+        </Link>
         <nav className="navbar__links">
           {links.map((l) => (
-            <a key={l.href} href={l.href}>{l.label}</a>
+            <Link key={l.href} to={l.href} className="navbar__link">{l.label}</Link>
           ))}
         </nav>
-        <a href="#contact" className="navbar__cta">Let's talk</a>
+        <Link to="/#contact" className="navbar__cta">Let's talk</Link>
         <button
           className={`navbar__toggle ${open ? 'is-open' : ''}`}
           aria-label="Toggle menu"
@@ -49,7 +50,7 @@ export default function Navbar() {
       {open && (
         <nav className="navbar__mobile">
           {links.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
+            <Link key={l.href} to={l.href} onClick={() => setOpen(false)}>{l.label}</Link>
           ))}
         </nav>
       )}

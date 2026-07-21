@@ -69,7 +69,23 @@
   font-size: clamp(40px, 7vw, 76px);
   font-weight: 700;
   line-height: 1.05;
-  color: var(--text);
+  background: linear-gradient(
+    100deg,
+    var(--text) 30%,
+    var(--accent-strong) 45%,
+    var(--columbia-blue) 50%,
+    var(--text) 65%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: hero-sheen 6s ease-in-out infinite;
+}
+
+@keyframes hero-sheen {
+  0% { background-position: 200% 0; }
+  100% { background-position: -50% 0; }
 }
 
 .hero__title {

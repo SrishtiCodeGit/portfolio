@@ -14,25 +14,48 @@ export const profile = {
 
 export const education = [
   {
+    slug: "columbia-university",
     school: "Columbia University",
+    isAlmaMater: true,
     location: "New York, United States",
     degree: "Master of Science, Enterprise Risk Management",
     note: "F-1, Three-Year STEM OPT Eligible",
     period: "2025 - 2026",
-    details: [
-      "Coursework: Financial Risk Management, Financial Modeling, Capital Markets and Investments, Portfolio Management, Operational Risk, Quantitative Risk Analytics, IT Risk, Regulatory Reporting",
-      "Certifications: Bloomberg Market Concepts (BMC) · Financial Markets, Yale University (Coursera) · Statistics for Data Science with Python, IBM",
+    summary: "Graduate coursework spanning financial risk, quantitative analytics, and regulatory frameworks.",
+    coursework: [
+      "Financial Risk Management",
+      "Financial Modeling",
+      "Capital Markets and Investments",
+      "Portfolio Management",
+      "Operational Risk",
+      "Quantitative Risk Analytics",
+      "IT Risk",
+      "Regulatory Reporting",
+    ],
+    certifications: [
+      "Bloomberg Market Concepts (BMC)",
+      "Financial Markets, Yale University (Coursera)",
+      "Statistics for Data Science with Python, IBM",
     ],
   },
   {
+    slug: "srm-institute",
     school: "SRM Institute of Science and Technology",
+    isAlmaMater: false,
     location: "Chennai, India",
     degree: "Bachelor of Technology, Computer Science and Information Technology",
     note: "CGPA 3.5 (Dean's List)",
     period: "2020 - 2024",
-    details: [
-      "Technical Focus: Machine Learning, AI Modeling, Predictive Modeling, Generative AI, NLP and LLMs, Statistical Modeling",
+    summary: "Undergraduate degree focused on machine learning, AI modeling, and statistical methods.",
+    coursework: [
+      "Machine Learning",
+      "AI Modeling",
+      "Predictive Modeling",
+      "Generative AI",
+      "NLP and LLMs",
+      "Statistical Modeling",
     ],
+    certifications: [],
   },
 ];
 
@@ -91,31 +114,46 @@ export const experience = [
 
 export const projects = [
   {
+    slug: "systemic-ai-exposure-risk",
     title: "Systemic AI Exposure Risk in Diversified Equity Portfolios",
     period: "2025 - 2026",
     tech: ["Python", "Pandas", "Scikit-learn", "SQL", "Tableau"],
     link: "https://github.com/SrishtiCodeGit/AI-as-a-Systemic-Factor-in-Portfolio-Risk",
     linkLabel: "GitHub",
     graphic: "network",
+    tagline: "Mapping hidden AI concentration risk across the S&P 500.",
     bullets: [
       "Analyzed real-time S&P 500 data across sectors to identify hidden AI-driven concentration and cross-sector dependency risks in equity portfolios.",
       "Conducted correlation analysis and built Python visualizations to measure systemic exposure to shared AI infrastructure providers.",
       "Modeled AI shock and crisis scenarios, estimating portfolio downside exposure of up to 69% despite sector diversification.",
     ],
+    longDescription: [
+      "Most portfolio diversification models assume sector spread is enough to limit downside risk — this project asked what happens when the AI infrastructure underneath every sector is the same handful of providers.",
+      "Using real-time S&P 500 constituent data, I mapped which companies share AI infrastructure dependencies (cloud compute, foundation models, chip supply) and ran correlation analysis to surface concentration that standard sector-diversification metrics miss entirely.",
+      "The scenario models estimate that a shock to shared AI infrastructure providers could produce downside exposure of up to 69%, even in portfolios that look well-diversified on paper — a finding aimed at risk teams evaluating systemic, cross-sector dependencies rather than just single-stock risk.",
+    ],
   },
   {
+    slug: "el-nino-financial-risk-dashboard",
     title: "El Niño Financial Risk Dashboard",
     period: "2025 - 2026",
     tech: ["Python", "NumPy", "Matplotlib", "Streamlit", "JavaScript", "Node.js", "NOAA/ERA5 Data"],
     link: "https://elnino-financial-dashboardgit-bunlcerb4vkrcyhaqfmbaf.streamlit.app",
     linkLabel: "Streamlit App",
     graphic: "climate",
+    tagline: "Turning climate cycles into quantified financial exposure.",
     bullets: [
       "Built an interactive Streamlit dashboard to model and visualize financial risk implications of El Niño climate cycles using NOAA and ERA5 geospatial datasets.",
       "Applied ML models and statistical risk frameworks to forecast climate-driven economic impacts, enabling scenario-based risk analysis across commodity and agricultural sectors with quantified financial exposure estimates.",
     ],
+    longDescription: [
+      "Climate cycles like El Niño move real money — agricultural yields, commodity prices, insurance exposure — but that risk rarely shows up in a format finance teams can act on. This dashboard closes that gap.",
+      "It pulls live ENSO (El Niño-Southern Oscillation) status alongside NOAA Climate Prediction Center and ERA5 geospatial data, then runs statistical and ML models to translate climate signals into scenario-based financial exposure across commodities, agriculture, and insurance/banking.",
+      "The live app tracks current ENSO status in real time and lets you drill into financial markets, commodities, and cryptocurrency views to see how a given climate regime propagates through each sector.",
+    ],
   },
   {
+    slug: "circle",
     title: "Circle — B2C Platform for Independent Music & Artist Collaboration",
     period: "2023 - 2024",
     tech: ["React", "HTML", "CSS", "JavaScript", "Figma"],
@@ -123,21 +161,33 @@ export const projects = [
     linkLabel: "Live App",
     graphic: "social",
     isCircle: true,
+    tagline: "Where independent artists find their people.",
     bullets: [
       "Founded and built Circle end-to-end: designed in Figma, developed core features in React, HTML, CSS, and JavaScript.",
       "Created creator-economy monetization models, demonstrating full-stack product development and entrepreneurial execution.",
     ],
+    longDescription: [
+      "Circle is a platform I founded to connect independent musicians worldwide — for discovery, collaboration, gigs, and sustainable income, without the traditional label gatekeepers.",
+      "I designed the full product in Figma and built it end-to-end in React, covering artist discovery, gig listings, and collaboration tools, alongside creator-economy monetization models so artists could actually get paid for the connections the platform enabled.",
+      "It's live today, connecting thousands of independent artists across dozens of countries for paid collaborations and gigs.",
+    ],
   },
   {
+    slug: "ctc-nlp-speech-models",
     title: "CTC-Based NLP Speech Models",
     period: "2023 - 2024",
     tech: ["NLP", "Deep Learning", "CTC Models"],
     link: "#",
     linkLabel: "SAMSUNG",
     graphic: "speech",
+    tagline: "Boosting transcription accuracy for unstructured speech.",
     bullets: [
       "Developed and optimized CTC-based NLP speech models that improved transcription accuracy by 25% for large-scale unstructured text.",
       "Applications in financial transcript analysis and sentiment analytics.",
+    ],
+    longDescription: [
+      "Built during a research collaboration with Samsung, this project focused on Connectionist Temporal Classification (CTC) based speech models for transcribing large volumes of unstructured audio.",
+      "Model tuning and architecture optimization improved transcription accuracy by 25% over the baseline, with a specific eye toward downstream use cases like financial transcript analysis and sentiment analytics — where transcription errors directly distort the signal analysts depend on.",
     ],
   },
 ];
