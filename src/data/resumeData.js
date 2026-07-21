@@ -2,6 +2,7 @@ import columbiaLogo from '../assets/logos/columbia.png';
 import leadsquaredLogo from '../assets/logos/leadsquared.png';
 import isroLogo from '../assets/logos/isro.png';
 import csirLogo from '../assets/logos/csir.png';
+import samsungLogo from '../assets/logos/samsung.png';
 import systemicAiChartImage from '../assets/projects/systemic-ai-chart.png';
 import circleShotImage from '../assets/projects/circle-shot.jpg';
 import elninoShotImage from '../assets/projects/elnino-shot.jpg';
@@ -196,6 +197,9 @@ export const projects = [
     tech: ["NLP", "Deep Learning", "CTC Models"],
     link: "#",
     linkLabel: "SAMSUNG",
+    noLinkReason: "Private company project — public link not available",
+    company: "Samsung",
+    companyLogo: samsungLogo,
     graphic: "llm",
     image: nlpSpeechImage,
     tagline: "Boosting transcription accuracy for unstructured speech.",

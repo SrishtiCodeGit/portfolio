@@ -39,6 +39,15 @@
   margin-bottom: 16px;
 }
 
+.project-card__company-logo {
+  height: 18px;
+  max-width: 90px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
 .project-card__link {
   display: inline-flex;
   align-items: center;

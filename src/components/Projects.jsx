@@ -7,6 +7,27 @@ import ProjectGraphic from './ProjectGraphic';
 import { projects } from '../data/resumeData';
 import './Projects.css';
 
+function ProjectLink({ p }) {
+  const hasLink = p.link && p.link !== '#';
+  if (hasLink) {
+    return (
+      <a
+        href={p.link}
+        target="_blank"
+        rel="noreferrer"
+        className={p.isCircle ? 'btn btn--primary btn--sm' : 'project-card__link'}
+      >
+        {p.isCircle ? 'View Website' : p.linkLabel} <FiArrowUpRight />
+      </a>
+    );
+  }
+  return (
+    <span className="project-card__link project-card__link--pending">
+      {p.noLinkReason || 'Link coming soon'}
+    </span>
+  );
+}
+
 export default function Projects() {
   return (
     <section id="projects" className="section projects">
@@ -18,7 +39,6 @@ export default function Projects() {
 
         <div className="projects__grid">
           {projects.map((p, i) => {
-            const hasLink = p.link && p.link !== '#';
             return (
               <Reveal delay={i * 0.1} key={p.title}>
                 <TiltCard className="project-card" maxTilt={5}>
@@ -31,6 +51,9 @@ export default function Projects() {
                   <div className="project-card__body">
                     <div className="project-card__head">
                       <span className="pill">{p.period}</span>
+                      {p.companyLogo && (
+                        <img src={p.companyLogo} alt={p.company} className="project-card__company-logo" />
+                      )}
                     </div>
                     <Link to={`/projects/${p.slug}`} className="project-card__title-link">
                       <h3>{p.title}</h3>
@@ -47,20 +70,7 @@ export default function Projects() {
                       <Link to={`/projects/${p.slug}`} className="btn btn--ghost btn--sm">
                         View Details <FiArrowRight />
                       </Link>
-                      {hasLink ? (
-                        <a
-                          href={p.link}
-                          target="_blank"
-                          rel="noreferrer"
-                          className={p.isCircle ? 'btn btn--primary btn--sm' : 'project-card__link'}
-                        >
-                          {p.isCircle ? 'View Website' : p.linkLabel} <FiArrowUpRight />
-                        </a>
-                      ) : (
-                        <span className="project-card__link project-card__link--pending">
-                          Link coming soon
-                        </span>
-                      )}
+                      <ProjectLink p={p} />
                     </div>
                   </div>
                 </TiltCard>

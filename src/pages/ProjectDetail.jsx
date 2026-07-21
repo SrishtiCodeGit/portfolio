@@ -32,7 +32,12 @@ export default function ProjectDetail() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <p className="detail-eyebrow">{project.period}</p>
+          <div className="detail-eyebrow-row">
+            <p className="detail-eyebrow">{project.period}</p>
+            {project.companyLogo && (
+              <img src={project.companyLogo} alt={project.company} className="detail-company-logo" />
+            )}
+          </div>
           <h1 className="detail-project-title">{project.title}</h1>
           {project.tagline && <p className="detail-summary detail-tagline">{project.tagline}</p>}
         </motion.div>
@@ -86,7 +91,7 @@ export default function ProjectDetail() {
             </a>
           ) : (
             <span className="project-card__link project-card__link--pending">
-              {project.linkLabel} link coming soon
+              {project.noLinkReason || `${project.linkLabel} link coming soon`}
             </span>
           )}
           <Link to="/#projects" className="btn btn--ghost">Back to Projects</Link>

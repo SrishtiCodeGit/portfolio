@@ -35,6 +35,22 @@
   margin-bottom: 10px;
 }
 
+.detail-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.detail-company-logo {
+  height: 22px;
+  max-width: 110px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
 .detail-head h1 {
   font-size: clamp(28px, 4vw, 40px);
   font-weight: 700;
