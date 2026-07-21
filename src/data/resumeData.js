@@ -5,6 +5,7 @@ import csirLogo from '../assets/logos/csir.png';
 import systemicAiChartImage from '../assets/projects/systemic-ai-chart.png';
 import circleShotImage from '../assets/projects/circle-shot.jpg';
 import elninoShotImage from '../assets/projects/elnino-shot.jpg';
+import nlpSpeechImage from '../assets/projects/nlp-speech.jpg';
 
 export const profile = {
   name: "Srishti Chauhan",
@@ -196,6 +197,7 @@ export const projects = [
     link: "#",
     linkLabel: "SAMSUNG",
     graphic: "llm",
+    image: nlpSpeechImage,
     tagline: "Boosting transcription accuracy for unstructured speech.",
     bullets: [
       "Developed and optimized CTC-based NLP speech models that improved transcription accuracy by 25% for large-scale unstructured text.",

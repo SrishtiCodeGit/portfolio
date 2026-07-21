@@ -28,7 +28,11 @@ export default function LogoBadge({ name, src, size = 48, shape = 'circle' }) {
   };
 
   return (
-    <div className={`logo-badge logo-badge--${shape}`} style={style} title={name}>
+    <div
+      className={`logo-badge logo-badge--${shape} ${src ? 'logo-badge--has-image' : ''}`}
+      style={style}
+      title={name}
+    >
       {src ? (
         <img src={src} alt={`${name} logo`} className="logo-badge__img" />
       ) : (
