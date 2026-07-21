@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiArrowLeft, FiArrowUpRight } from 'react-icons/fi';
 import ProjectGraphic from '../components/ProjectGraphic';
+import BrowserFrame from '../components/BrowserFrame';
 import { projects } from '../data/resumeData';
 import './DetailPage.css';
 
@@ -42,7 +43,9 @@ export default function ProjectDetail() {
           transition={{ duration: 0.5, delay: 0.16 }}
           className="detail-graphic-wrap"
         >
-          <ProjectGraphic type={project.graphic} />
+          <BrowserFrame domain={project.domain} image={project.image}>
+            <ProjectGraphic type={project.graphic} />
+          </BrowserFrame>
         </motion.div>
 
         <motion.div

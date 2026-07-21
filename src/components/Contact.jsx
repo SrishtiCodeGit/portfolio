@@ -41,7 +41,7 @@ export default function Contact() {
       <div className="container">
         <Reveal>
           <p className="section-label">Contact</p>
-          <h2 className="section-title">Let's connect</h2>
+          <h2 className="section-title">Let's <em>Connect</em></h2>
         </Reveal>
 
         <div className="contact__grid">

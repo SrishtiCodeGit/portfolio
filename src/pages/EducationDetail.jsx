@@ -1,7 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiArrowLeft, FiMapPin, FiCheck } from 'react-icons/fi';
-import CrestBadge from '../components/CrestBadge';
 import LogoBadge from '../components/LogoBadge';
 import { education } from '../data/resumeData';
 import './DetailPage.css';
@@ -31,7 +30,7 @@ export default function EducationDetail() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          {edu.isAlmaMater ? <CrestBadge size={72} /> : <LogoBadge name={edu.school} size={68} shape="rounded" />}
+          <LogoBadge name={edu.school} src={edu.logo} size={72} shape="rounded" />
           <div>
             <p className="detail-eyebrow">{edu.period}</p>
             <h1>{edu.school}</h1>

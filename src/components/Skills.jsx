@@ -9,7 +9,7 @@ export default function Skills() {
       <div className="container">
         <Reveal>
           <p className="section-label">Skills</p>
-          <h2 className="section-title">What I work with</h2>
+          <h2 className="section-title">What I Work <em>With</em></h2>
         </Reveal>
 
         <div className="skills__grid">

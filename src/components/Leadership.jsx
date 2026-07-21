@@ -9,7 +9,7 @@ export default function Leadership() {
       <div className="container">
         <Reveal>
           <p className="section-label">Leadership & Awards</p>
-          <h2 className="section-title">Beyond the resume</h2>
+          <h2 className="section-title">Beyond the <em>Resume</em></h2>
         </Reveal>
 
         <div className="leadership__list">

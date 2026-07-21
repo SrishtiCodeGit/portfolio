@@ -1,3 +1,7 @@
+import columbiaLogo from '../assets/logos/columbia.png';
+import leadsquaredLogo from '../assets/logos/leadsquared.png';
+import githubProjectImage from '../assets/projects/systemic-ai-github.png';
+
 export const profile = {
   name: "Srishti Chauhan",
   title: "Risk Analytics & AI Enthusiast",
@@ -16,6 +20,7 @@ export const education = [
   {
     slug: "columbia-university",
     school: "Columbia University",
+    logo: columbiaLogo,
     isAlmaMater: true,
     location: "New York, United States",
     degree: "Master of Science, Enterprise Risk Management",
@@ -41,6 +46,7 @@ export const education = [
   {
     slug: "srm-institute",
     school: "SRM Institute of Science and Technology",
+    logo: null,
     isAlmaMater: false,
     location: "Chennai, India",
     degree: "Bachelor of Technology, Computer Science and Information Technology",
@@ -77,7 +83,7 @@ export const experience = [
   },
   {
     company: "Leadsquared",
-    logo: null,
+    logo: leadsquaredLogo,
     location: "Bangalore, India",
     role: "Business Analyst",
     period: "Jun 2024 - May 2025",
@@ -120,6 +126,8 @@ export const projects = [
     tech: ["Python", "Pandas", "Scikit-learn", "SQL", "Tableau"],
     link: "https://github.com/SrishtiCodeGit/AI-as-a-Systemic-Factor-in-Portfolio-Risk",
     linkLabel: "GitHub",
+    domain: "github.com/SrishtiCodeGit",
+    image: githubProjectImage,
     graphic: "network",
     tagline: "Mapping hidden AI concentration risk across the S&P 500.",
     bullets: [
@@ -140,6 +148,7 @@ export const projects = [
     tech: ["Python", "NumPy", "Matplotlib", "Streamlit", "JavaScript", "Node.js", "NOAA/ERA5 Data"],
     link: "https://elnino-financial-dashboardgit-bunlcerb4vkrcyhaqfmbaf.streamlit.app",
     linkLabel: "Streamlit App",
+    domain: "elnino-financial-dashboard.streamlit.app",
     graphic: "climate",
     tagline: "Turning climate cycles into quantified financial exposure.",
     bullets: [
@@ -159,6 +168,7 @@ export const projects = [
     tech: ["React", "HTML", "CSS", "JavaScript", "Figma"],
     link: "https://the-circle-liard.vercel.app",
     linkLabel: "Live App",
+    domain: "the-circle-liard.vercel.app",
     graphic: "social",
     isCircle: true,
     tagline: "Where independent artists find their people.",
@@ -190,24 +200,6 @@ export const projects = [
       "Model tuning and architecture optimization improved transcription accuracy by 25% over the baseline, with a specific eye toward downstream use cases like financial transcript analysis and sentiment analytics — where transcription errors directly distort the signal analysts depend on.",
     ],
   },
-];
-
-export const stats = [
-  { value: 5, suffix: "+", label: "Enterprise CRM Rollouts" },
-  { value: 30, suffix: "%", label: "Operational Risk Reduced" },
-  { value: 25, suffix: "%", label: "Conversion Rate Increase" },
-  { value: 15, suffix: "%", label: "Forecast Accuracy Improved" },
-];
-
-export const tickerItems = [
-  { label: "RISK MGMT", trend: "up" },
-  { label: "AI / ML", trend: "up" },
-  { label: "TPRM", trend: "up" },
-  { label: "CAPITAL MARKETS", trend: "down" },
-  { label: "PYTHON", trend: "up" },
-  { label: "REGULATORY REPORTING", trend: "up" },
-  { label: "GENERATIVE AI", trend: "up" },
-  { label: "STRESS TESTING", trend: "down" },
 ];
 
 export const leadership = [

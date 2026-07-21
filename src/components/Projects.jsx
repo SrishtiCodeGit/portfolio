@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { FiArrowUpRight, FiArrowRight } from 'react-icons/fi';
 import Reveal from './Reveal';
 import TiltCard from './TiltCard';
+import BrowserFrame from './BrowserFrame';
 import ProjectGraphic from './ProjectGraphic';
 import { projects } from '../data/resumeData';
 import './Projects.css';
@@ -12,7 +13,7 @@ export default function Projects() {
       <div className="container">
         <Reveal>
           <p className="section-label">Projects</p>
-          <h2 className="section-title">Things I've built</h2>
+          <h2 className="section-title">Things I've <em>Built</em></h2>
         </Reveal>
 
         <div className="projects__grid">
@@ -22,7 +23,9 @@ export default function Projects() {
               <Reveal delay={i * 0.1} key={p.title}>
                 <TiltCard className="project-card" maxTilt={5}>
                   <Link to={`/projects/${p.slug}`} className="project-card__graphic-link">
-                    <ProjectGraphic type={p.graphic} />
+                    <BrowserFrame domain={p.domain} image={p.image}>
+                      <ProjectGraphic type={p.graphic} />
+                    </BrowserFrame>
                   </Link>
 
                   <div className="project-card__body">

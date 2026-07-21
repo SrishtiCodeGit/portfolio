@@ -59,7 +59,7 @@ export default function Experience() {
       <div className="container">
         <Reveal>
           <p className="section-label">Experience</p>
-          <h2 className="section-title">Where I've worked</h2>
+          <h2 className="section-title">Where I've <em>Worked</em></h2>
           <p className="experience__hint">Click a company to see what I worked on.</p>
         </Reveal>
 

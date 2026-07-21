@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { FiMapPin, FiArrowRight } from 'react-icons/fi';
 import Reveal from './Reveal';
 import TiltCard from './TiltCard';
-import CrestBadge from './CrestBadge';
 import LogoBadge from './LogoBadge';
 import { education, profile } from '../data/resumeData';
 import './About.css';
@@ -13,7 +12,7 @@ export default function About() {
       <div className="container">
         <Reveal>
           <p className="section-label">About</p>
-          <h2 className="section-title">About Me</h2>
+          <h2 className="section-title">About <em>Me</em></h2>
         </Reveal>
 
         <Reveal delay={0.1}>
@@ -33,11 +32,7 @@ export default function About() {
                   maxTilt={6}
                 >
                   <div className="edu-card__top">
-                    {edu.isAlmaMater ? (
-                      <CrestBadge size={52} />
-                    ) : (
-                      <LogoBadge name={edu.school} size={48} shape="rounded" />
-                    )}
+                    <LogoBadge name={edu.school} src={edu.logo} size={52} shape="rounded" />
                     <div className="edu-card__head">
                       <h3>{edu.school}</h3>
                       <span className="edu-card__period">{edu.period}</span>
