@@ -1,0 +1,127 @@
+.project-graphic {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  background: linear-gradient(160deg, var(--bg-elevated), var(--bg-card));
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pg-svg {
+  width: 92%;
+  height: 92%;
+}
+
+/* Network */
+.pg-network__edge {
+  stroke: var(--columbia-blue);
+  stroke-width: 1;
+  opacity: 0.25;
+  animation: pg-edge-pulse 3.5s ease-in-out infinite;
+}
+
+.pg-network__node {
+  fill: var(--accent);
+  animation: pg-node-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes pg-edge-pulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes pg-node-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.25); opacity: 1; }
+}
+
+.pg-network__node {
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* Climate */
+.pg-climate__wave {
+  fill: none;
+  stroke-width: 2;
+}
+
+.pg-climate__wave--back {
+  stroke: var(--columbia-blue);
+  opacity: 0.35;
+  animation: pg-drift 8s ease-in-out infinite;
+}
+
+.pg-climate__wave--front {
+  stroke: var(--accent-strong);
+  opacity: 0.55;
+  animation: pg-drift 6s ease-in-out infinite reverse;
+}
+
+.pg-climate__trend {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 6 6;
+  animation: pg-dash 10s linear infinite;
+}
+
+@keyframes pg-drift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
+
+@keyframes pg-dash {
+  to { stroke-dashoffset: -200; }
+}
+
+/* Social (Circle) */
+.pg-social__ring {
+  fill: none;
+  stroke-width: 2;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.pg-social__ring--a {
+  stroke: var(--accent);
+  opacity: 0.7;
+  animation: pg-orbit 12s linear infinite;
+}
+
+.pg-social__ring--b {
+  stroke: var(--columbia-blue);
+  opacity: 0.55;
+  animation: pg-orbit 9s linear infinite reverse;
+}
+
+.pg-social__ring--c {
+  stroke: var(--accent-strong);
+  opacity: 0.6;
+  animation: pg-orbit 7s linear infinite;
+}
+
+@keyframes pg-orbit {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.04); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Speech */
+.pg-speech__bar {
+  fill: var(--accent);
+  animation: pg-bar-bounce 1.4s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes pg-bar-bounce {
+  0%, 100% { transform: scaleY(0.6); opacity: 0.6; }
+  50% { transform: scaleY(1); opacity: 1; }
+}

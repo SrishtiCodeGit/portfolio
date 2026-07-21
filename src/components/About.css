@@ -34,8 +34,30 @@
   transform: translateY(-4px);
 }
 
+.edu-card--alma {
+  border-color: var(--columbia-blue);
+  background: linear-gradient(160deg, var(--columbia-blue-soft), var(--bg-card) 60%);
+}
+
+.edu-card__top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+
+.edu-card__mascot {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--columbia-blue);
+}
+
 .edu-card__head {
   display: flex;
+  flex: 1;
+  min-width: 0;
   justify-content: space-between;
   align-items: baseline;
   gap: 12px;

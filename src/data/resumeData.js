@@ -39,6 +39,7 @@ export const education = [
 export const experience = [
   {
     company: "ABFinance",
+    logo: null,
     location: "New York, USA",
     role: "Platform Risk Intern",
     period: "May 2026 - Jun 2026",
@@ -53,6 +54,7 @@ export const experience = [
   },
   {
     company: "Leadsquared",
+    logo: null,
     location: "Bangalore, India",
     role: "Business Analyst",
     period: "Jun 2024 - May 2025",
@@ -65,6 +67,7 @@ export const experience = [
   },
   {
     company: "Indian Space Research Organisation (ISRO)",
+    logo: null,
     location: "Remote, India",
     role: "Data Analyst Intern",
     period: "Jan 2023 - Sep 2023",
@@ -75,6 +78,7 @@ export const experience = [
   },
   {
     company: "Council of Scientific and Industrial Research (CSIR)",
+    logo: null,
     location: "Palampur, India",
     role: "Machine Learning Intern",
     period: "Aug 2022 - Sep 2022",
@@ -92,6 +96,7 @@ export const projects = [
     tech: ["Python", "Pandas", "Scikit-learn", "SQL", "Tableau"],
     link: "#",
     linkLabel: "GitHub",
+    graphic: "network",
     bullets: [
       "Analyzed real-time S&P 500 data across sectors to identify hidden AI-driven concentration and cross-sector dependency risks in equity portfolios.",
       "Conducted correlation analysis and built Python visualizations to measure systemic exposure to shared AI infrastructure providers.",
@@ -104,6 +109,7 @@ export const projects = [
     tech: ["Python", "NumPy", "Matplotlib", "Streamlit", "JavaScript", "Node.js", "NOAA/ERA5 Data"],
     link: "#",
     linkLabel: "Streamlit App",
+    graphic: "climate",
     bullets: [
       "Built an interactive Streamlit dashboard to model and visualize financial risk implications of El Niño climate cycles using NOAA and ERA5 geospatial datasets.",
       "Applied ML models and statistical risk frameworks to forecast climate-driven economic impacts, enabling scenario-based risk analysis across commodity and agricultural sectors with quantified financial exposure estimates.",
@@ -115,6 +121,8 @@ export const projects = [
     tech: ["React", "HTML", "CSS", "JavaScript", "Figma"],
     link: "#",
     linkLabel: "Live App",
+    graphic: "social",
+    isCircle: true,
     bullets: [
       "Founded and built Circle end-to-end: designed in Figma, developed core features in React, HTML, CSS, and JavaScript.",
       "Created creator-economy monetization models, demonstrating full-stack product development and entrepreneurial execution.",
@@ -126,11 +134,30 @@ export const projects = [
     tech: ["NLP", "Deep Learning", "CTC Models"],
     link: "#",
     linkLabel: "SAMSUNG",
+    graphic: "speech",
     bullets: [
       "Developed and optimized CTC-based NLP speech models that improved transcription accuracy by 25% for large-scale unstructured text.",
       "Applications in financial transcript analysis and sentiment analytics.",
     ],
   },
+];
+
+export const stats = [
+  { value: 5, suffix: "+", label: "Enterprise CRM Rollouts" },
+  { value: 30, suffix: "%", label: "Operational Risk Reduced" },
+  { value: 25, suffix: "%", label: "Conversion Rate Increase" },
+  { value: 15, suffix: "%", label: "Forecast Accuracy Improved" },
+];
+
+export const tickerItems = [
+  { label: "RISK MGMT", trend: "up" },
+  { label: "AI / ML", trend: "up" },
+  { label: "TPRM", trend: "up" },
+  { label: "CAPITAL MARKETS", trend: "down" },
+  { label: "PYTHON", trend: "up" },
+  { label: "REGULATORY REPORTING", trend: "up" },
+  { label: "GENERATIVE AI", trend: "up" },
+  { label: "STRESS TESTING", trend: "down" },
 ];
 
 export const leadership = [

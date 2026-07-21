@@ -20,6 +20,12 @@ export default function Hero() {
   return (
     <section id="top" className="hero">
       <div className="hero__glow" />
+      <svg className="hero__chart" viewBox="0 0 800 300" preserveAspectRatio="none" aria-hidden="true">
+        <polyline
+          points="0,220 80,200 160,240 240,160 320,190 400,110 480,150 560,80 640,120 720,50 800,90"
+          className="hero__chart-line"
+        />
+      </svg>
       <div className="container hero__inner">
         <motion.div variants={container} initial="hidden" animate="show" className="hero__text">
           <motion.p variants={item} className="hero__eyebrow">

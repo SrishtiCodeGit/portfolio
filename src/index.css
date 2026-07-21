@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #0b0e14;
-  --bg-elevated: #11151f;
-  --bg-card: #141926;
-  --border: #232a3a;
-  --text: #e9edf5;
-  --text-dim: #9aa5b8;
-  --text-faint: #6b7488;
-  --accent: #7dd3c0;
-  --accent-strong: #a7f3e0;
-  --accent-soft: rgba(125, 211, 192, 0.12);
+  --bg: #0a0e1c;
+  --bg-elevated: #10152a;
+  --bg-card: #131a34;
+  --border: #232b4d;
+  --text: #eef1f8;
+  --text-dim: #9aa6c4;
+  --text-faint: #6b7398;
+  --accent: #3b5bdb;
+  --accent-strong: #6c8bff;
+  --accent-soft: rgba(59, 91, 219, 0.16);
+  --columbia-blue: #b9d9eb;
+  --columbia-blue-soft: rgba(185, 217, 235, 0.14);
   --danger: #f08787;
   --font-display: 'Space Grotesk', 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
