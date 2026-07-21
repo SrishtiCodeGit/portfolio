@@ -32,7 +32,7 @@ export const education = [
     location: "New York, United States",
     degree: "Master of Science, Enterprise Risk Management",
     note: "F-1, Three-Year STEM OPT Eligible",
-    period: "2025 - 2026",
+    period: "2025 to 2026",
     summary: "Graduate coursework spanning financial risk, quantitative analytics, and regulatory frameworks.",
     coursework: [
       "Financial Risk Management",
@@ -58,7 +58,7 @@ export const education = [
     location: "Chennai, India",
     degree: "Bachelor of Technology, Computer Science and Information Technology",
     note: "CGPA 3.5 (Dean's List)",
-    period: "2020 - 2024",
+    period: "2020 to 2024",
     summary: "Undergraduate degree focused on machine learning, AI modeling, and statistical methods.",
     coursework: [
       "Machine Learning",
@@ -78,7 +78,7 @@ export const experience = [
     logo: abfinanceLogo,
     location: "New York, USA",
     role: "Platform Risk Intern",
-    period: "May 2026 - Jun 2026",
+    period: "May 2026 to Jun 2026",
     bullets: [
       "Served as Platform Risk Intern, leading risk strategy and controls design with the team in support of the U.S. market entry and September 2026 launch.",
       "Executed RCSA across core platform functions, identifying operational risk exposures, documenting control gaps, and driving remediation aligned with ERM standards.",
@@ -93,7 +93,7 @@ export const experience = [
     logo: leadsquaredLogo,
     location: "Bangalore, India",
     role: "Business Analyst",
-    period: "Jun 2024 - May 2025",
+    period: "Jun 2024 to May 2025",
     bullets: [
       "Led 5+ end-to-end enterprise CRM implementations (including Physics Wallah) by developing automated workflow controls that reduced operational risk by 30% and minimized data-entry errors across high-volume accounts.",
       "Mitigated credit and churn risk for distressed accounts through structured resolution frameworks and custom API integrations, restoring client satisfaction and preventing revenue loss.",
@@ -106,7 +106,7 @@ export const experience = [
     logo: isroLogo,
     location: "Remote, India",
     role: "Data Analyst Intern",
-    period: "Jan 2023 - Sep 2023",
+    period: "Jan 2023 to Sep 2023",
     bullets: [
       "Built a remote-sensing predictive framework using JavaScript and Google Earth Engine (GEE), improving agricultural risk forecasting accuracy by 15% with Sentinel-2 satellite imagery.",
       "Applied supervised ML models to NDVI and multi-year temporal datasets for crop yield forecasting and commodity risk analysis.",
@@ -117,7 +117,7 @@ export const experience = [
     logo: csirLogo,
     location: "Palampur, India",
     role: "Machine Learning Intern",
-    period: "Aug 2022 - Sep 2022",
+    period: "Aug 2022 to Sep 2022",
     bullets: [
       "Designed deep learning models to detect protein-ligand interactions, improving drug discovery prediction accuracy by 30%.",
       "Applied ML algorithms to high-dimensional biological datasets, streamlining research workflows and accelerating analysis pipelines.",
@@ -129,7 +129,7 @@ export const projects = [
   {
     slug: "systemic-ai-exposure-risk",
     title: "Systemic AI Exposure Risk in Diversified Equity Portfolios",
-    period: "2025 - 2026",
+    period: "2025 to 2026",
     tech: ["Python", "Pandas", "Scikit-learn", "SQL", "Tableau"],
     link: "https://github.com/SrishtiCodeGit/AI-as-a-Systemic-Factor-in-Portfolio-Risk",
     linkLabel: "GitHub",
@@ -151,7 +151,7 @@ export const projects = [
   {
     slug: "el-nino-financial-risk-dashboard",
     title: "El Niño Financial Risk Dashboard",
-    period: "2025 - 2026",
+    period: "2025 to 2026",
     tech: ["Python", "NumPy", "Matplotlib", "Streamlit", "JavaScript", "Node.js", "NOAA/ERA5 Data"],
     link: "https://elnino-financial-dashboardgit-bunlcerb4vkrcyhaqfmbaf.streamlit.app",
     linkLabel: "Streamlit App",
@@ -172,7 +172,7 @@ export const projects = [
   {
     slug: "circle",
     title: "Circle — B2C Platform for Independent Music & Artist Collaboration",
-    period: "2023 - 2024",
+    period: "2023 to 2024",
     tech: ["React", "HTML", "CSS", "JavaScript", "Figma"],
     link: "https://the-circle-liard.vercel.app",
     linkLabel: "Live App",
@@ -194,7 +194,7 @@ export const projects = [
   {
     slug: "ctc-nlp-speech-models",
     title: "CTC-Based NLP Speech Models",
-    period: "2023 - 2024",
+    period: "2023 to 2024",
     tech: ["NLP", "Deep Learning", "CTC Models"],
     link: "#",
     linkLabel: "SAMSUNG",
