@@ -3,6 +3,7 @@ import leadsquaredLogo from '../assets/logos/leadsquared.png';
 import isroLogo from '../assets/logos/isro.png';
 import csirLogo from '../assets/logos/csir.png';
 import samsungLogo from '../assets/logos/samsung.png';
+import abfinanceLogo from '../assets/logos/abfinance.png';
 import systemicAiChartImage from '../assets/projects/systemic-ai-chart.png';
 import circleShotImage from '../assets/projects/circle-shot.jpg';
 import elninoShotImage from '../assets/projects/elnino-shot.jpg';
@@ -14,8 +15,8 @@ export const profile = {
   location: "New York, NY",
   email: "sc5824@columbia.edu",
   phone: "+1 (332) 260-1923",
-  linkedin: "https://linkedin.com",
-  github: "https://github.com",
+  linkedin: "https://www.linkedin.com/in/srishtichauhan4747/?skipRedirect=true",
+  github: "https://github.com/SrishtiCodeGit",
   tagline:
     "Enterprise Risk Management graduate student blending financial risk modeling with AI, machine learning, and full-stack product development.",
   intro:
@@ -74,7 +75,7 @@ export const education = [
 export const experience = [
   {
     company: "ABFinance",
-    logo: null,
+    logo: abfinanceLogo,
     location: "New York, USA",
     role: "Platform Risk Intern",
     period: "May 2026 - Jun 2026",

@@ -11,21 +11,13 @@ export default function About() {
     <section id="about" className="section about">
       <div className="container">
         <Reveal>
-          <p className="section-label">About</p>
-          <h2 className="section-title">About <em>Me</em></h2>
-        </Reveal>
-
-        <Reveal delay={0.1}>
-          <p className="about__intro">{profile.intro}</p>
-        </Reveal>
-
-        <Reveal delay={0.15}>
-          <h3 className="about__subheading">Education</h3>
+          <p className="section-label">Education</p>
+          <h2 className="section-title">Where I <em>Studied</em></h2>
         </Reveal>
 
         <div className="about__grid">
           {education.map((edu, i) => (
-            <Reveal delay={0.15 + i * 0.1} key={edu.school}>
+            <Reveal delay={i * 0.1} key={edu.school}>
               <Link to={`/education/${edu.slug}`} className="edu-card-link">
                 <TiltCard
                   className={`edu-card ${edu.isAlmaMater ? 'edu-card--alma' : ''}`}
@@ -52,6 +44,15 @@ export default function About() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.2}>
+          <p className="section-label about__label-spaced">About</p>
+          <h3 className="about__subheading about__subheading--large">About <em>Me</em></h3>
+        </Reveal>
+
+        <Reveal delay={0.25}>
+          <p className="about__intro">{profile.intro}</p>
+        </Reveal>
       </div>
     </section>
   );
