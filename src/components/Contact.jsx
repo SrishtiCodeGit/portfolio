@@ -48,7 +48,7 @@ export default function Contact() {
           <Reveal>
             <div className="contact__info">
               <p className="contact__lead">
-                I'm always open to conversations about risk analytics, AI, and product — reach out directly or send a message.
+                I'm always open to conversations about risk analytics, AI, and product. Reach out directly or send a message.
               </p>
               <div className="contact__links">
                 <a href={`mailto:${profile.email}`}><FiMail /> {profile.email}</a>
@@ -108,7 +108,7 @@ export default function Contact() {
               </motion.button>
 
               {status === 'success' && (
-                <p className="contact__status contact__status--ok"><FiCheck /> Message sent — I'll get back to you soon.</p>
+                <p className="contact__status contact__status--ok"><FiCheck /> Message sent. I'll get back to you soon.</p>
               )}
               {status === 'error' && (
                 <p className="contact__status contact__status--err"><FiAlertCircle /> {errorMsg}</p>

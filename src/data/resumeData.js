@@ -20,7 +20,7 @@ export const profile = {
   tagline:
     "Enterprise Risk Management graduate student blending financial risk modeling with AI, machine learning, and full-stack product development.",
   intro:
-    "Hey, I'm Srishti — someone who's into risk management but just as obsessed with AI and tech. I come from a tech background and love coding and turning data into decisions. I've studied financial and operational risk, gotten hands-on exposure to third-party risk management, and even ran my own startup, Circle, back in 2023. I'm a curious mind who's always willing to learn something new — exploring emerging technology while keeping up with the financial markets. (Yes, WSJ is basically my morning coffee, haha.)",
+    "Hey, I'm Srishti, someone who's into risk management but just as obsessed with AI and tech. I come from a tech background and love coding and turning data into decisions. I've studied financial and operational risk, gotten hands-on exposure to third-party risk management, and even ran my own startup, Circle, back in 2023. I'm a curious mind who's always willing to learn something new, exploring emerging technology while keeping up with the financial markets. (Yes, WSJ is basically my morning coffee, haha.)",
 };
 
 export const education = [
@@ -143,9 +143,9 @@ export const projects = [
       "Modeled AI shock and crisis scenarios, estimating portfolio downside exposure of up to 69% despite sector diversification.",
     ],
     longDescription: [
-      "Most portfolio diversification models assume sector spread is enough to limit downside risk — this project asked what happens when the AI infrastructure underneath every sector is the same handful of providers.",
+      "Most portfolio diversification models assume sector spread is enough to limit downside risk. This project asked what happens when the AI infrastructure underneath every sector is the same handful of providers.",
       "Using real-time S&P 500 constituent data, I mapped which companies share AI infrastructure dependencies (cloud compute, foundation models, chip supply) and ran correlation analysis to surface concentration that standard sector-diversification metrics miss entirely.",
-      "The scenario models estimate that a shock to shared AI infrastructure providers could produce downside exposure of up to 69%, even in portfolios that look well-diversified on paper — a finding aimed at risk teams evaluating systemic, cross-sector dependencies rather than just single-stock risk.",
+      "The scenario models estimate that a shock to shared AI infrastructure providers could produce downside exposure of up to 69%, even in portfolios that look well-diversified on paper, a finding aimed at risk teams evaluating systemic, cross-sector dependencies rather than just single-stock risk.",
     ],
   },
   {
@@ -164,14 +164,14 @@ export const projects = [
       "Applied ML models and statistical risk frameworks to forecast climate-driven economic impacts, enabling scenario-based risk analysis across commodity and agricultural sectors with quantified financial exposure estimates.",
     ],
     longDescription: [
-      "Climate cycles like El Niño move real money — agricultural yields, commodity prices, insurance exposure — but that risk rarely shows up in a format finance teams can act on. This dashboard closes that gap.",
+      "Climate cycles like El Niño move real money (agricultural yields, commodity prices, insurance exposure), but that risk rarely shows up in a format finance teams can act on. This dashboard closes that gap.",
       "It pulls live ENSO (El Niño-Southern Oscillation) status alongside NOAA Climate Prediction Center and ERA5 geospatial data, then runs statistical and ML models to translate climate signals into scenario-based financial exposure across commodities, agriculture, and insurance/banking.",
       "The live app tracks current ENSO status in real time and lets you drill into financial markets, commodities, and cryptocurrency views to see how a given climate regime propagates through each sector.",
     ],
   },
   {
     slug: "circle",
-    title: "Circle — B2C Platform for Independent Music & Artist Collaboration",
+    title: "Circle: B2C Platform for Independent Music & Artist Collaboration",
     period: "2023 to 2024",
     tech: ["React", "HTML", "CSS", "JavaScript", "Figma"],
     link: "https://the-circle-liard.vercel.app",
@@ -186,7 +186,7 @@ export const projects = [
       "Created creator-economy monetization models, demonstrating full-stack product development and entrepreneurial execution.",
     ],
     longDescription: [
-      "Circle is a platform I founded to connect independent musicians worldwide — for discovery, collaboration, gigs, and sustainable income, without the traditional label gatekeepers.",
+      "Circle is a platform I founded to connect independent musicians worldwide for discovery, collaboration, gigs, and sustainable income, without the traditional label gatekeepers.",
       "I designed the full product in Figma and built it end-to-end in React, covering artist discovery, gig listings, and collaboration tools, alongside creator-economy monetization models so artists could actually get paid for the connections the platform enabled.",
       "It's live today, connecting thousands of independent artists across dozens of countries for paid collaborations and gigs.",
     ],
@@ -198,7 +198,7 @@ export const projects = [
     tech: ["NLP", "Deep Learning", "CTC Models"],
     link: "#",
     linkLabel: "SAMSUNG",
-    noLinkReason: "Private company project — public link not available",
+    noLinkReason: "Private company project · public link not available",
     company: "Samsung",
     companyLogo: samsungLogo,
     graphic: "llm",
@@ -210,17 +210,17 @@ export const projects = [
     ],
     longDescription: [
       "Built during a research collaboration with Samsung, this project focused on Connectionist Temporal Classification (CTC) based speech models for transcribing large volumes of unstructured audio.",
-      "Model tuning and architecture optimization improved transcription accuracy by 25% over the baseline, with a specific eye toward downstream use cases like financial transcript analysis and sentiment analytics — where transcription errors directly distort the signal analysts depend on.",
+      "Model tuning and architecture optimization improved transcription accuracy by 25% over the baseline, with a specific eye toward downstream use cases like financial transcript analysis and sentiment analytics, where transcription errors directly distort the signal analysts depend on.",
     ],
   },
 ];
 
 export const leadership = [
   "Top 5 Finalist, PRMIA Risk Essay Competition",
-  "Treasurer, Columbia Investment and Finance Society (CIFS) — Oversee budgeting and financial planning for club operations and events.",
-  "Portfolio Project, CIFS — Student-managed equity portfolio covering stock screening, investment thesis development, and index benchmarking.",
-  "External Relations Manager, Columbia Risk Management Club — Lead industry outreach and engagement with risk and finance professionals.",
-  "President, Association for Computing Machinery (ACM) — Increased member engagement by 25% through structured initiatives and programming.",
+  "Treasurer, Columbia Investment and Finance Society (CIFS): Oversee budgeting and financial planning for club operations and events.",
+  "Portfolio Project, CIFS: Student-managed equity portfolio covering stock screening, investment thesis development, and index benchmarking.",
+  "External Relations Manager, Columbia Risk Management Club: Lead industry outreach and engagement with risk and finance professionals.",
+  "President, Association for Computing Machinery (ACM): Increased member engagement by 25% through structured initiatives and programming.",
 ];
 
 export const skills = [

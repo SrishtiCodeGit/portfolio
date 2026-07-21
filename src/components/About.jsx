@@ -31,7 +31,7 @@ export default function About() {
                     </div>
                   </div>
                   {edu.isAlmaMater && (
-                    <span className="edu-card__mascot">🦁 Go Lions — my alma mater</span>
+                    <span className="edu-card__mascot">🦁 Go Lions · my alma mater</span>
                   )}
                   <p className="edu-card__loc"><FiMapPin /> {edu.location}</p>
                   <p className="edu-card__degree">{edu.degree}</p>
