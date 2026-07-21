@@ -1,6 +1,9 @@
 import columbiaLogo from '../assets/logos/columbia.png';
 import leadsquaredLogo from '../assets/logos/leadsquared.png';
+import isroLogo from '../assets/logos/isro.png';
+import csirLogo from '../assets/logos/csir.png';
 import githubProjectImage from '../assets/projects/systemic-ai-github.png';
+import circleShotImage from '../assets/projects/circle-shot.jpg';
 
 export const profile = {
   name: "Srishti Chauhan",
@@ -96,7 +99,7 @@ export const experience = [
   },
   {
     company: "Indian Space Research Organisation (ISRO)",
-    logo: null,
+    logo: isroLogo,
     location: "Remote, India",
     role: "Data Analyst Intern",
     period: "Jan 2023 - Sep 2023",
@@ -107,7 +110,7 @@ export const experience = [
   },
   {
     company: "Council of Scientific and Industrial Research (CSIR)",
-    logo: null,
+    logo: csirLogo,
     location: "Palampur, India",
     role: "Machine Learning Intern",
     period: "Aug 2022 - Sep 2022",
@@ -126,7 +129,7 @@ export const projects = [
     tech: ["Python", "Pandas", "Scikit-learn", "SQL", "Tableau"],
     link: "https://github.com/SrishtiCodeGit/AI-as-a-Systemic-Factor-in-Portfolio-Risk",
     linkLabel: "GitHub",
-    domain: "github.com/SrishtiCodeGit",
+    domain: "github.com · Systemic AI Risk",
     image: githubProjectImage,
     graphic: "network",
     tagline: "Mapping hidden AI concentration risk across the S&P 500.",
@@ -148,7 +151,7 @@ export const projects = [
     tech: ["Python", "NumPy", "Matplotlib", "Streamlit", "JavaScript", "Node.js", "NOAA/ERA5 Data"],
     link: "https://elnino-financial-dashboardgit-bunlcerb4vkrcyhaqfmbaf.streamlit.app",
     linkLabel: "Streamlit App",
-    domain: "elnino-financial-dashboard.streamlit.app",
+    domain: "streamlit.app · El Niño Dashboard",
     graphic: "climate",
     tagline: "Turning climate cycles into quantified financial exposure.",
     bullets: [
@@ -168,7 +171,8 @@ export const projects = [
     tech: ["React", "HTML", "CSS", "JavaScript", "Figma"],
     link: "https://the-circle-liard.vercel.app",
     linkLabel: "Live App",
-    domain: "the-circle-liard.vercel.app",
+    domain: "vercel.app · Circle",
+    image: circleShotImage,
     graphic: "social",
     isCircle: true,
     tagline: "Where independent artists find their people.",
