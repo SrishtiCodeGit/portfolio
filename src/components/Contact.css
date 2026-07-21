@@ -38,6 +38,18 @@
   color: var(--text-faint);
 }
 
+.contact__note {
+  margin-top: 24px;
+  padding: 16px 20px;
+  max-width: 380px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-dim);
+  background: var(--accent-soft);
+  border: 1px solid rgba(59, 91, 219, 0.25);
+  border-radius: 12px;
+}
+
 .contact__form {
   display: flex;
   flex-direction: column;

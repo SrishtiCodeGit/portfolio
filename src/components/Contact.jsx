@@ -56,6 +56,10 @@ export default function Contact() {
                 <a href={profile.github} target="_blank" rel="noreferrer"><FiGithub /> GitHub</a>
               </div>
               <p className="contact__meta">{profile.location} · {profile.phone}</p>
+              <p className="contact__note">
+                You can also just email me directly if you ever want to talk about anything, risk,
+                AI, technology, my Columbia experience, or anything else. I'm always happy to help.
+              </p>
             </div>
           </Reveal>
 
