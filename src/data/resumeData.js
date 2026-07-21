@@ -94,7 +94,7 @@ export const projects = [
     title: "Systemic AI Exposure Risk in Diversified Equity Portfolios",
     period: "2025 - 2026",
     tech: ["Python", "Pandas", "Scikit-learn", "SQL", "Tableau"],
-    link: "#",
+    link: "https://github.com/SrishtiCodeGit/AI-as-a-Systemic-Factor-in-Portfolio-Risk",
     linkLabel: "GitHub",
     graphic: "network",
     bullets: [
@@ -107,7 +107,7 @@ export const projects = [
     title: "El Niño Financial Risk Dashboard",
     period: "2025 - 2026",
     tech: ["Python", "NumPy", "Matplotlib", "Streamlit", "JavaScript", "Node.js", "NOAA/ERA5 Data"],
-    link: "#",
+    link: "https://elnino-financial-dashboardgit-bunlcerb4vkrcyhaqfmbaf.streamlit.app",
     linkLabel: "Streamlit App",
     graphic: "climate",
     bullets: [
