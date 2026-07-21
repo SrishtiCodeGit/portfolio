@@ -122,3 +122,25 @@
   0%, 100% { transform: scaleY(0.6); opacity: 0.6; }
   50% { transform: scaleY(1); opacity: 1; }
 }
+
+/* LLM / neural network */
+.pg-llm__edge {
+  stroke: var(--columbia-blue);
+  stroke-width: 0.75;
+  opacity: 0.12;
+  animation: pg-llm-pulse 3.5s ease-in-out infinite;
+}
+
+.pg-llm__node {
+  fill: var(--accent);
+  stroke: var(--bg-elevated);
+  stroke-width: 1.5;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: pg-node-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pg-llm-pulse {
+  0%, 100% { opacity: 0.08; }
+  50% { opacity: 0.4; }
+}

@@ -74,11 +74,52 @@ function SpeechGraphic() {
   );
 }
 
+function LlmGraphic() {
+  const layers = [
+    { x: 35, ys: [40, 80, 120, 160] },
+    { x: 130, ys: [22, 62, 95, 128, 168] },
+    { x: 225, ys: [60, 95, 130] },
+  ];
+
+  const connections = [];
+  for (let l = 0; l < layers.length - 1; l++) {
+    layers[l].ys.forEach((y1, i) => {
+      layers[l + 1].ys.forEach((y2, j) => {
+        connections.push({ x1: layers[l].x, y1, x2: layers[l + 1].x, y2, delay: (i + j) * 0.04 + l * 0.3 });
+      });
+    });
+  }
+
+  return (
+    <svg viewBox="0 0 260 190" className="pg-svg pg-llm">
+      {connections.map((c, i) => (
+        <line
+          key={i}
+          x1={c.x1} y1={c.y1} x2={c.x2} y2={c.y2}
+          className="pg-llm__edge"
+          style={{ animationDelay: `${c.delay}s` }}
+        />
+      ))}
+      {layers.map((layer, li) =>
+        layer.ys.map((y, i) => (
+          <circle
+            key={`${li}-${i}`}
+            cx={layer.x} cy={y} r={li === 1 ? 7 : 6}
+            className="pg-llm__node"
+            style={{ animationDelay: `${li * 0.3 + i * 0.08}s` }}
+          />
+        ))
+      )}
+    </svg>
+  );
+}
+
 const GRAPHICS = {
   network: NetworkGraphic,
   climate: ClimateGraphic,
   social: SocialGraphic,
   speech: SpeechGraphic,
+  llm: LlmGraphic,
 };
 
 export default function ProjectGraphic({ type }) {

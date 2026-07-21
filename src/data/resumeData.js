@@ -2,8 +2,9 @@ import columbiaLogo from '../assets/logos/columbia.png';
 import leadsquaredLogo from '../assets/logos/leadsquared.png';
 import isroLogo from '../assets/logos/isro.png';
 import csirLogo from '../assets/logos/csir.png';
-import githubProjectImage from '../assets/projects/systemic-ai-github.png';
+import systemicAiChartImage from '../assets/projects/systemic-ai-chart.png';
 import circleShotImage from '../assets/projects/circle-shot.jpg';
+import elninoShotImage from '../assets/projects/elnino-shot.jpg';
 
 export const profile = {
   name: "Srishti Chauhan",
@@ -130,7 +131,7 @@ export const projects = [
     link: "https://github.com/SrishtiCodeGit/AI-as-a-Systemic-Factor-in-Portfolio-Risk",
     linkLabel: "GitHub",
     domain: "github.com · Systemic AI Risk",
-    image: githubProjectImage,
+    image: systemicAiChartImage,
     graphic: "network",
     tagline: "Mapping hidden AI concentration risk across the S&P 500.",
     bullets: [
@@ -152,6 +153,7 @@ export const projects = [
     link: "https://elnino-financial-dashboardgit-bunlcerb4vkrcyhaqfmbaf.streamlit.app",
     linkLabel: "Streamlit App",
     domain: "streamlit.app · El Niño Dashboard",
+    image: elninoShotImage,
     graphic: "climate",
     tagline: "Turning climate cycles into quantified financial exposure.",
     bullets: [
@@ -193,7 +195,7 @@ export const projects = [
     tech: ["NLP", "Deep Learning", "CTC Models"],
     link: "#",
     linkLabel: "SAMSUNG",
-    graphic: "speech",
+    graphic: "llm",
     tagline: "Boosting transcription accuracy for unstructured speech.",
     bullets: [
       "Developed and optimized CTC-based NLP speech models that improved transcription accuracy by 25% for large-scale unstructured text.",
