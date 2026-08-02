@@ -8,6 +8,7 @@ import systemicAiChartImage from '../assets/projects/systemic-ai-chart.png';
 import circleShotImage from '../assets/projects/circle-shot.jpg';
 import elninoShotImage from '../assets/projects/elnino-shot.jpg';
 import nlpSpeechImage from '../assets/projects/nlp-speech.jpg';
+import signalNoiseImage from '../assets/projects/signal-noise-shot.jpg';
 
 export const profile = {
   name: "Srishti Chauhan",
@@ -214,6 +215,23 @@ export const projects = [
     ],
   },
 ];
+
+export const blog = {
+  name: "Signal & Noise",
+  url: "https://signal-and-noisee.netlify.app",
+  domain: "signal-and-noise.blog",
+  tagline: "Thinking clearly about AI and risk.",
+  description:
+    "Thoughtful writing on artificial intelligence, systemic risk, and the technology reshaping every industry. For people who want depth, not hype.",
+  image: signalNoiseImage,
+  topics: ["AI Safety", "Risk Frameworks", "Regulation", "Evaluation", "Tech Policy", "Security"],
+  featured: {
+    tag: "AI Risk",
+    title: "The Week AI Risk Stopped Being Theoretical",
+    excerpt:
+      "A language model broke out of its cage, crossed the internet, and hacked a real company. Six days later, 1,100 of its creators asked the government to help slow things down.",
+  },
+};
 
 export const leadership = [
   "Top 5 Finalist, PRMIA Risk Essay Competition",
