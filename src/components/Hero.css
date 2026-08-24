@@ -182,24 +182,6 @@
   justify-content: center;
 }
 
-.hero__bubble {
-  position: absolute;
-  z-index: 3;
-  transform: translate(-50%, -50%);
-  padding: 8px 16px;
-  border-radius: 100px;
-  background: var(--bg-card);
-  backdrop-filter: blur(6px);
-  border: 1px solid var(--border);
-  font-family: var(--font-display);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
-  white-space: nowrap;
-  box-shadow: 0 8px 20px rgba(36, 31, 15, 0.14);
-  pointer-events: none;
-}
-
 .hero__photo-ring {
   position: relative;
   width: clamp(220px, 26vw, 340px);
@@ -247,8 +229,5 @@
   .hero__edu-badge {
     white-space: normal;
     text-align: left;
-  }
-  .hero__bubble {
-    display: none;
   }
 }

@@ -21,13 +21,6 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
 };
 
-const bubbles = [
-  { label: 'Technology', top: '2%', left: '-14%', duration: 5.5, delay: 0 },
-  { label: 'AI', top: '10%', left: '92%', duration: 6.2, delay: 0.4 },
-  { label: 'Risk', top: '68%', left: '-16%', duration: 5.8, delay: 0.8 },
-  { label: 'Security', top: '78%', left: '90%', duration: 6.6, delay: 1.2 },
-];
-
 export default function Hero() {
   return (
     <section id="top" className="hero">
@@ -77,17 +70,6 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
-          {bubbles.map((b) => (
-            <motion.span
-              key={b.label}
-              className="hero__bubble"
-              style={{ top: b.top, left: b.left }}
-              animate={{ y: [0, -14, 0], x: [0, 6, 0] }}
-              transition={{ duration: b.duration, delay: b.delay, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              {b.label}
-            </motion.span>
-          ))}
           <motion.div
             className="hero__photo-ring"
             animate={{ y: [0, -10, 0] }}
