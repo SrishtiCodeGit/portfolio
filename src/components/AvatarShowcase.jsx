@@ -1,41 +1,96 @@
 import { motion } from 'framer-motion';
 import Reveal from './Reveal';
 import avatar3d from '../assets/avatar-3d.png';
+import { profile, hackathon, projects, blog } from '../data/resumeData';
 import './AvatarShowcase.css';
+
+const achievements = [
+  { icon: '🏆', text: `${hackathon.award} — Hackathon Winner` },
+  { icon: '🎓', text: 'M.S. Enterprise Risk Management, Columbia University' },
+  { icon: '🚀', text: 'Founder of Circle, a live artist-collaboration platform' },
+  { icon: '✍️', text: `Writer at ${blog.name}, on AI and risk` },
+  { icon: '📊', text: 'Cut operational risk 30% for enterprise CRM rollouts' },
+  { icon: '💼', text: `${projects.length} projects shipped, from hackathons to production` },
+];
+
+const listContainer = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
+};
+
+const listItem = {
+  hidden: { opacity: 0, x: -16 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+};
 
 export default function AvatarShowcase() {
   return (
     <section id="avatar" className="section avatar-showcase">
-      <div className="container avatar-showcase__inner">
+      <div className="container">
         <Reveal>
-          <p className="section-label">bonus</p>
-          <h2 className="section-title">Me, Rendered in <em>3D</em></h2>
-          <p className="avatar-showcase__caption">
-            A little something extra, my 3D self, generated with Meshy AI.
-          </p>
+          <p className="section-label">profile</p>
+          <h2 className="section-title">
+            Who I Am, What I've <em>Built</em>
+          </h2>
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="avatar-showcase__stage">
-            <motion.div
-              className="avatar-showcase__ring"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 14, repeat: Infinity, ease: 'linear' }}
-            />
-            <motion.div
-              className="avatar-showcase__ring avatar-showcase__ring--reverse"
-              animate={{ rotate: -360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-            />
-            <motion.img
-              src={avatar3d}
-              alt="3D avatar of Srishti Chauhan"
-              className="avatar-showcase__img"
-              animate={{ scaleX: [1, 0.08, -1, -0.08, 1] }}
-              transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', times: [0, 0.25, 0.5, 0.75, 1] }}
-            />
+        <div className="avatar-showcase__grid">
+          <Reveal delay={0.1}>
+            <div className="avatar-showcase__stage">
+              <motion.div
+                className="avatar-showcase__ring"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 14, repeat: Infinity, ease: 'linear' }}
+              />
+              <motion.div
+                className="avatar-showcase__ring avatar-showcase__ring--reverse"
+                animate={{ rotate: -360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+              />
+              <motion.img
+                src={avatar3d}
+                alt={`3D avatar of ${profile.name}`}
+                className="avatar-showcase__img"
+                animate={{ scaleX: [1, 0.08, -1, -0.08, 1] }}
+                transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', times: [0, 0.25, 0.5, 0.75, 1] }}
+              />
+              <span className="avatar-showcase__caption">Generated with Meshy AI</span>
+            </div>
+          </Reveal>
+
+          <div className="avatar-showcase__panel">
+            <Reveal delay={0.15}>
+              <div className="avatar-showcase__stat-line">
+                <span className="avatar-showcase__key">class</span>
+                <span className="avatar-showcase__value">"Risk Analyst × AI Builder"</span>
+              </div>
+              <div className="avatar-showcase__stat-line">
+                <span className="avatar-showcase__key">focus</span>
+                <span className="avatar-showcase__value">["Enterprise Risk", "Machine Learning", "Full-Stack Dev"]</span>
+              </div>
+              <div className="avatar-showcase__stat-line">
+                <span className="avatar-showcase__key">based_in</span>
+                <span className="avatar-showcase__value">"{profile.location}"</span>
+              </div>
+            </Reveal>
+
+            <p className="avatar-showcase__unlock-label">achievements.unlocked()</p>
+            <motion.ul
+              className="avatar-showcase__list"
+              variants={listContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: '-60px' }}
+            >
+              {achievements.map((a) => (
+                <motion.li key={a.text} variants={listItem}>
+                  <span className="avatar-showcase__list-icon">{a.icon}</span>
+                  {a.text}
+                </motion.li>
+              ))}
+            </motion.ul>
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

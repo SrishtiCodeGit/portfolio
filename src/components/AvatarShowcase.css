@@ -1,30 +1,15 @@
-.avatar-showcase__inner {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+.avatar-showcase__grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 64px;
   align-items: center;
-}
-
-.avatar-showcase .section-label {
-  justify-content: center;
-}
-
-.avatar-showcase .section-title {
-  margin-bottom: 12px;
-}
-
-.avatar-showcase__caption {
-  font-size: 15px;
-  color: var(--text-dim);
-  max-width: 420px;
-  margin: 0 auto;
 }
 
 .avatar-showcase__stage {
   position: relative;
-  width: clamp(220px, 28vw, 320px);
+  width: clamp(200px, 22vw, 280px);
   aspect-ratio: 1 / 1;
-  margin-top: 56px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,12 +36,85 @@
   width: 78%;
   height: 78%;
   object-fit: contain;
-  mix-blend-mode: screen;
   filter: drop-shadow(0 0 30px var(--accent-soft));
 }
 
-@media (max-width: 640px) {
-  .avatar-showcase__caption {
-    margin-top: 4px;
+.avatar-showcase__caption {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.avatar-showcase__panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar-showcase__stat-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.avatar-showcase__key {
+  color: var(--term-green);
+}
+
+.avatar-showcase__key::after {
+  content: ':';
+  color: var(--text-faint);
+}
+
+.avatar-showcase__value {
+  color: var(--text);
+}
+
+.avatar-showcase__unlock-label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-strong);
+  margin-top: 28px;
+  margin-bottom: 16px;
+}
+
+.avatar-showcase__list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.avatar-showcase__list li:last-child {
+  margin-bottom: 0;
+}
+
+.avatar-showcase__list-icon {
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+@media (max-width: 800px) {
+  .avatar-showcase__grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+  .avatar-showcase__stage {
+    margin-bottom: 24px;
   }
 }
