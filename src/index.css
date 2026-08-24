@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #fffbeb;
-  --bg-elevated: #fef3c7;
-  --bg-card: #fffefa;
-  --border: #f0dfa0;
-  --text: #241f0f;
-  --text-dim: #6b6248;
-  --text-faint: #a89c78;
-  --accent: #d97706;
-  --accent-strong: #b45309;
-  --accent-soft: rgba(217, 119, 6, 0.12);
-  --accent-ink: #241f0f;
-  --columbia-blue: #2563eb;
-  --columbia-blue-soft: rgba(37, 99, 235, 0.1);
-  --danger: #dc2626;
-  --term-green: #15803d;
+  --bg: #0c0e13;
+  --bg-elevated: #14171f;
+  --bg-card: #191d27;
+  --border: #272c38;
+  --text: #edeff4;
+  --text-dim: #9aa1b0;
+  --text-faint: #626a7a;
+
+  /* Risk heatmap system — the site's actual color language */
+  --risk-low: #22c55e;
+  --risk-mid: #eab308;
+  --risk-high: #ef4444;
+  --risk-gradient: linear-gradient(90deg, var(--risk-low) 0%, var(--risk-mid) 50%, var(--risk-high) 100%);
+
+  --accent: #eab308;
+  --accent-strong: #facc15;
+  --accent-soft: rgba(234, 179, 8, 0.14);
+  --accent-ink: #0c0e13;
+  --columbia-blue: #60a5fa;
+  --columbia-blue-soft: rgba(96, 165, 250, 0.12);
+  --danger: #ef4444;
+  --term-green: #4ade80;
   --font-display: 'Space Grotesk', 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
@@ -33,7 +40,7 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 1px 1px, rgba(36, 31, 15, 0.12) 1px, transparent 0),
+    radial-gradient(circle at 1px 1px, rgba(154, 161, 176, 0.16) 1px, transparent 0),
     var(--bg);
   background-size: 34px 34px;
   background-attachment: fixed;

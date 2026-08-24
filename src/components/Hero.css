@@ -39,10 +39,11 @@
   line-height: 1.05;
   background: linear-gradient(
     100deg,
-    var(--text) 30%,
-    var(--accent-strong) 45%,
-    var(--columbia-blue) 50%,
-    var(--text) 65%
+    var(--text) 25%,
+    var(--risk-low) 42%,
+    var(--risk-mid) 50%,
+    var(--risk-high) 58%,
+    var(--text) 75%
   );
   background-size: 250% 100%;
   -webkit-background-clip: text;
@@ -123,12 +124,15 @@
 }
 
 .btn--primary {
-  background: var(--accent);
+  background: var(--risk-gradient);
+  background-size: 200% 100%;
+  background-position: 0% 0%;
   color: var(--accent-ink);
+  transition: transform 0.2s ease, background-position 0.4s ease;
 }
 
 .btn--primary:hover {
-  background: var(--accent-strong);
+  background-position: 100% 0%;
   color: var(--accent-ink);
 }
 

@@ -10,7 +10,7 @@
 }
 
 .navbar--scrolled {
-  background: rgba(255, 251, 235, 0.85);
+  background: rgba(12, 14, 19, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -84,7 +84,8 @@
 }
 
 .navbar__cta:hover {
-  background: var(--accent);
+  background: var(--risk-gradient);
+  border-color: transparent;
   color: var(--accent-ink);
 }
 

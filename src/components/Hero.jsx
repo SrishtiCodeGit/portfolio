@@ -5,6 +5,7 @@ import { profile } from '../data/resumeData';
 import profilePhoto from '../assets/profile.jpg';
 import columbiaLogo from '../assets/logos/columbia.png';
 import TerminalIntro from './TerminalIntro';
+import RiskMatrixBg from './RiskMatrixBg';
 import './Hero.css';
 
 const MotionLink = motion.create(Link);
@@ -25,6 +26,7 @@ export default function Hero() {
   return (
     <section id="top" className="hero">
       <div className="hero__glow" />
+      <RiskMatrixBg />
       <div className="container hero__inner">
         <motion.div variants={container} initial="hidden" animate="show" className="hero__text">
           <motion.div variants={item}>
