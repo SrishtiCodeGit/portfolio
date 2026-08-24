@@ -176,6 +176,15 @@
   margin-top: 8px;
 }
 
+.detail-link--pending {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-faint);
+}
+
 @media (max-width: 700px) {
   .detail-page {
     padding: 110px 0 72px;

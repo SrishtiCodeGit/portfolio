@@ -90,7 +90,7 @@ export default function ProjectDetail() {
               {project.isCircle ? 'View Website' : project.linkLabel} <FiArrowUpRight />
             </a>
           ) : (
-            <span className="project-card__link project-card__link--pending">
+            <span className="detail-link--pending">
               {project.noLinkReason || `${project.linkLabel} link coming soon`}
             </span>
           )}
