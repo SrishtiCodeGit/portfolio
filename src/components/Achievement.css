@@ -1,0 +1,148 @@
+.achievement {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.achievement__card {
+  position: relative;
+  background: linear-gradient(160deg, rgba(245, 185, 66, 0.08), var(--bg-card) 55%);
+  border: 1px solid rgba(245, 185, 66, 0.35);
+  border-radius: 24px;
+  padding: 44px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.achievement__card::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 50%;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(245, 185, 66, 0.16) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.achievement__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.achievement__trophy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 100px;
+  background: rgba(245, 185, 66, 0.14);
+  border: 1px solid rgba(245, 185, 66, 0.4);
+  color: #f5b942;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+}
+
+.achievement__title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.achievement__award {
+  font-size: 17px;
+  font-weight: 600;
+  color: #f5b942;
+  margin-bottom: 6px;
+}
+
+.achievement__prize {
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.achievement__event {
+  font-size: 14px;
+  color: var(--text-faint);
+  margin-bottom: 20px;
+}
+
+.achievement__tagline {
+  font-size: 15.5px;
+  color: var(--text-dim);
+  line-height: 1.65;
+  max-width: 440px;
+  margin-bottom: 28px;
+}
+
+.achievement__team {
+  margin-bottom: 32px;
+}
+
+.achievement__team-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 14px;
+}
+
+.achievement__team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.achievement__teammate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.achievement__teammate span {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+.achievement__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.achievement__event-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-faint);
+  transition: color 0.2s ease;
+}
+
+.achievement__event-link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .achievement__card {
+    padding: 28px;
+  }
+  .achievement__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .achievement__video {
+    order: -1;
+  }
+}

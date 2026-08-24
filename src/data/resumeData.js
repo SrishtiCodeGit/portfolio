@@ -9,6 +9,7 @@ import circleShotImage from '../assets/projects/circle-shot.jpg';
 import elninoShotImage from '../assets/projects/elnino-shot.jpg';
 import nlpSpeechImage from '../assets/projects/nlp-speech.jpg';
 import signalNoiseImage from '../assets/projects/signal-noise-shot.jpg';
+import breadcrumbsThumb from '../assets/projects/breadcrumbs-thumb.jpg';
 
 export const profile = {
   name: "Srishti Chauhan",
@@ -22,6 +23,21 @@ export const profile = {
     "Enterprise Risk Management graduate student blending financial risk modeling with AI, machine learning, and full-stack product development.",
   intro:
     "Hey, I'm Srishti, someone who's into risk management but just as obsessed with AI and tech. I come from a tech background and love coding and turning data into decisions. I've studied financial and operational risk, gotten hands-on exposure to third-party risk management, and even ran my own startup, Circle, back in 2023. I'm a curious mind who's always willing to learn something new, exploring emerging technology while keeping up with the financial markets. (Yes, WSJ is basically my morning coffee, haha.)",
+};
+
+export const hackathon = {
+  projectName: "Breadcrumbs",
+  award: "Best Use of MongoDB",
+  prize: "$1,000 Prize",
+  event: "Dell x NVIDIA AI Factory Hackathon",
+  eventLocation: "NYC",
+  eventUrl: "https://builderbase.com/event/dell-x-nvidia-ai-hackathon-nyc",
+  githubUrl: "https://github.com/TheApexWu/breadcrumbs",
+  videoId: "_ndw5fS4UO0",
+  videoThumb: breadcrumbsThumb,
+  tagline: "An always-on food-safety agent that runs entirely offline, built in one day.",
+  team: ["Srishti Chauhan", "Alex", "Nick", "Ola", "Richard"],
+  slug: "breadcrumbs",
 };
 
 export const education = [
@@ -127,6 +143,30 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    slug: "breadcrumbs",
+    title: "Breadcrumbs — On-Prem Food-Safety Agent",
+    period: "2026",
+    tech: ["MongoDB", "NVIDIA GB10", "Nemotron", "deck.gl", "openFDA API"],
+    link: "https://github.com/TheApexWu/breadcrumbs",
+    linkLabel: "GitHub",
+    domain: "github.com · Breadcrumbs",
+    image: breadcrumbsThumb,
+    graphic: "network",
+    isHackathonWinner: true,
+    tagline: "An always-on food-safety agent that runs entirely offline.",
+    bullets: [
+      "Built an on-premises agent that identifies which NYC food establishments are exposed the moment an FDA recall hits, and recommends action in seconds, entirely offline on a local NVIDIA GB10.",
+      "Used MongoDB change streams as an always-on watcher, 2dsphere geospatial indexing, and aggregation pipelines to join live FDA recalls with supplier risk history and NYC health violations.",
+      "Won Best Use of MongoDB ($1,000 prize) at the Dell x NVIDIA AI Factory Hackathon in NYC.",
+    ],
+    longDescription: [
+      "48 million Americans get food poisoning every year, and 3,000 die from it. Breadcrumbs is an always-on agent built for NYC food operators: when an FDA recall happens, it identifies which locations are exposed and recommends action within seconds, running completely offline on local hardware.",
+      "It runs locally by design. Supplier data is proprietary, and FSMA 204 mandates lot-level traceability, so the whole pipeline, from ingesting openFDA recalls and NYC DOHMH violations to generating a safety brief, happens on-device via local LLM inference (NemoClaw + Nemotron) on an NVIDIA GB10.",
+      "MongoDB does the heavy lifting: change streams act as an always-on watcher for new recalls, 2dsphere geospatial indexes power the exposure queries, and aggregation pipelines join recall, supplier, and violation data in real time. A deck.gl console visualizes exposure across the city with extruded buildings and live risk heat mapping.",
+      "Built in one day at the Dell x NVIDIA AI Factory Hackathon in NYC with Alex, Nick, Ola, and Richard. Won Best Use of MongoDB.",
+    ],
+  },
   {
     slug: "systemic-ai-exposure-risk",
     title: "Systemic AI Exposure Risk in Diversified Equity Portfolios",

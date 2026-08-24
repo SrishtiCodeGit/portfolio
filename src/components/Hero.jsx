@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiArrowDown, FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
 import { profile } from '../data/resumeData';
 import profilePhoto from '../assets/profile.jpg';
+import avatar3d from '../assets/avatar-3d.png';
 import columbiaLogo from '../assets/logos/columbia.png';
 import './Hero.css';
 
@@ -28,6 +30,8 @@ const bubbles = [
 ];
 
 export default function Hero() {
+  const [showAvatar, setShowAvatar] = useState(false);
+
   return (
     <section id="top" className="hero">
       <div className="hero__glow" />
@@ -97,9 +101,19 @@ export default function Hero() {
             className="hero__photo-ring"
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+            onMouseEnter={() => setShowAvatar(true)}
+            onMouseLeave={() => setShowAvatar(false)}
           >
             <img src={profilePhoto} alt={profile.name} className="hero__photo" />
+            <motion.img
+              src={avatar3d}
+              alt={`${profile.name} 3D avatar`}
+              className="hero__photo hero__photo--avatar"
+              animate={{ opacity: showAvatar ? 1 : 0 }}
+              transition={{ duration: 0.35, ease: 'easeInOut' }}
+            />
           </motion.div>
+          <span className="hero__photo-hint">✨ Hover for 3D me</span>
         </motion.div>
       </div>
       <MotionLink
