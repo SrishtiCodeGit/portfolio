@@ -42,7 +42,8 @@
 
 .navbar__link {
   position: relative;
-  font-size: 14px;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
   font-weight: 500;
   color: var(--text-dim);
   transition: color 0.2s ease;

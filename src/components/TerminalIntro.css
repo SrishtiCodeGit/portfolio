@@ -1,0 +1,30 @@
+.terminal-intro {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.terminal-intro__prompt {
+  color: var(--term-green);
+}
+
+.terminal-intro__cmd {
+  color: var(--text);
+}
+
+.terminal-intro__cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--term-green);
+  opacity: 1;
+}
+
+.terminal-intro__cursor--blink {
+  animation: terminal-blink 1s step-end infinite;
+}
+
+@keyframes terminal-blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
   --bg: #0a0e1c;
@@ -14,8 +14,10 @@
   --columbia-blue: #b9d9eb;
   --columbia-blue-soft: rgba(185, 217, 235, 0.14);
   --danger: #f08787;
+  --term-green: #4ade80;
   --font-display: 'Space Grotesk', 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
   --max-width: 1080px;
 }
 
@@ -29,7 +31,11 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 1px 1px, rgba(154, 166, 196, 0.14) 1px, transparent 0),
+    var(--bg);
+  background-size: 34px 34px;
+  background-attachment: fixed;
   color: var(--text);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
@@ -80,19 +86,21 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  font-family: var(--font-mono);
   font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--term-green);
   margin-bottom: 16px;
+  opacity: 0.85;
 }
 
 .section-label::before {
-  content: '';
-  width: 28px;
-  height: 1px;
-  background: var(--accent);
+  content: '//';
+  font-weight: 700;
+  color: var(--term-green);
+  opacity: 0.7;
 }
 
 .section-title {
@@ -111,7 +119,8 @@ button {
 .pill {
   display: inline-block;
   padding: 6px 14px;
-  font-size: 13px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
   font-weight: 500;
   color: var(--text-dim);
   background: var(--bg-elevated);

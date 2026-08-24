@@ -7,6 +7,7 @@ import Blog from '../components/Blog';
 import Skills from '../components/Skills';
 import Leadership from '../components/Leadership';
 import Contact from '../components/Contact';
+import AvatarShowcase from '../components/AvatarShowcase';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Skills />
       <Leadership />
       <Contact />
+      <AvatarShowcase />
     </>
   );
 }
