@@ -48,7 +48,7 @@
 .yt-embed--thumb:hover .yt-embed__play {
   transform: translate(-50%, -50%) scale(1.08);
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-ink);
 }
 
 .yt-embed__iframe {

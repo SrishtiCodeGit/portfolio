@@ -148,11 +148,12 @@
 
 .btn--primary {
   background: var(--accent);
-  color: #ffffff;
+  color: var(--accent-ink);
 }
 
 .btn--primary:hover {
   background: var(--accent-strong);
+  color: var(--accent-ink);
 }
 
 .btn--ghost {
@@ -211,7 +212,7 @@
   transform: translate(-50%, -50%);
   padding: 8px 16px;
   border-radius: 100px;
-  background: rgba(17, 21, 42, 0.85);
+  background: var(--bg-card);
   backdrop-filter: blur(6px);
   border: 1px solid var(--border);
   font-family: var(--font-display);
@@ -219,7 +220,7 @@
   font-weight: 600;
   color: var(--text);
   white-space: nowrap;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(36, 31, 15, 0.14);
   pointer-events: none;
 }
 

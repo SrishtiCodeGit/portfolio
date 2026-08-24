@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #0a0e1c;
-  --bg-elevated: #10152a;
-  --bg-card: #131a34;
-  --border: #232b4d;
-  --text: #eef1f8;
-  --text-dim: #9aa6c4;
-  --text-faint: #6b7398;
-  --accent: #3b5bdb;
-  --accent-strong: #6c8bff;
-  --accent-soft: rgba(59, 91, 219, 0.16);
-  --columbia-blue: #b9d9eb;
-  --columbia-blue-soft: rgba(185, 217, 235, 0.14);
-  --danger: #f08787;
-  --term-green: #4ade80;
+  --bg: #fffbeb;
+  --bg-elevated: #fef3c7;
+  --bg-card: #fffefa;
+  --border: #f0dfa0;
+  --text: #241f0f;
+  --text-dim: #6b6248;
+  --text-faint: #a89c78;
+  --accent: #d97706;
+  --accent-strong: #b45309;
+  --accent-soft: rgba(217, 119, 6, 0.12);
+  --accent-ink: #241f0f;
+  --columbia-blue: #2563eb;
+  --columbia-blue-soft: rgba(37, 99, 235, 0.1);
+  --danger: #dc2626;
+  --term-green: #15803d;
   --font-display: 'Space Grotesk', 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
@@ -32,7 +33,7 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 1px 1px, rgba(154, 166, 196, 0.14) 1px, transparent 0),
+    radial-gradient(circle at 1px 1px, rgba(36, 31, 15, 0.12) 1px, transparent 0),
     var(--bg);
   background-size: 34px 34px;
   background-attachment: fixed;
