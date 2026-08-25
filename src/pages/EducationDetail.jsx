@@ -19,8 +19,8 @@ export default function EducationDetail() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <Link to="/#about" className="detail-back">
-            <FiArrowLeft /> Back to home
+          <Link to="/education" className="detail-back">
+            <FiArrowLeft /> Back to education
           </Link>
         </motion.div>
 

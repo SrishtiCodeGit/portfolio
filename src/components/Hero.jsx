@@ -1,14 +1,12 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FiArrowDown, FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
+import { FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
 import { profile } from '../data/resumeData';
 import profilePhoto from '../assets/profile.jpg';
 import columbiaLogo from '../assets/logos/columbia.png';
 import TerminalIntro from './TerminalIntro';
 import RiskMatrixBg from './RiskMatrixBg';
 import './Hero.css';
-
-const MotionLink = motion.create(Link);
 
 const container = {
   hidden: {},
@@ -52,10 +50,10 @@ export default function Hero() {
             {profile.tagline}
           </motion.p>
           <motion.div variants={item} className="hero__actions">
-            <Link to="/#projects" className="btn btn--primary">
+            <Link to="/projects" className="btn btn--primary">
               View Projects
             </Link>
-            <Link to="/#contact" className="btn btn--ghost">
+            <Link to="/contact" className="btn btn--ghost">
               Get in Touch
             </Link>
           </motion.div>
@@ -81,15 +79,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
-      <MotionLink
-        to="/#about"
-        className="hero__scroll"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
-        aria-label="Scroll down"
-      >
-        <FiArrowDown />
-      </MotionLink>
     </section>
   );
 }

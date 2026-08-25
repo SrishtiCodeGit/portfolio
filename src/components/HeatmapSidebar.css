@@ -32,6 +32,11 @@
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
 }
 
+.heatmap-sidebar__tile.is-active {
+  width: 148px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
 .heatmap-sidebar__label {
   font-family: var(--font-mono);
   font-size: 12.5px;

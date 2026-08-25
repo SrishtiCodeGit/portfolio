@@ -1,0 +1,12 @@
+.section-page {
+  min-height: 100vh;
+  padding-top: 140px;
+}
+
+.section-page > .container {
+  padding-bottom: 24px;
+}
+
+.section-page .section {
+  padding-top: 0;
+}
