@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion';
-import { FiAward, FiBookOpen, FiZap, FiEdit3, FiTrendingDown, FiPackage } from 'react-icons/fi';
+import { FiCheck } from 'react-icons/fi';
 import Reveal from './Reveal';
 import { profile, hackathon, projects, blog } from '../data/resumeData';
 import './AvatarShowcase.css';
 
 const achievements = [
-  { icon: FiAward, name: 'Hackathon Champ', detail: hackathon.award, color: '#f5b942' },
-  { icon: FiBookOpen, name: 'Risk Scholar', detail: 'M.S. ERM · Columbia', color: '#3b82f6' },
-  { icon: FiZap, name: 'Founder Mode', detail: 'Circle', color: '#a855f7' },
-  { icon: FiEdit3, name: 'Prolific Writer', detail: blog.name, color: '#ec4899' },
-  { icon: FiTrendingDown, name: 'Risk Cutter', detail: '-30% operational risk', color: '#22c55e' },
-  { icon: FiPackage, name: 'Ship It', detail: `${projects.length} projects shipped`, color: '#f97316' },
+  { key: 'hackathon', value: `"${hackathon.award}"` },
+  { key: 'education', value: '"M.S. ERM · Columbia"' },
+  { key: 'founder', value: '"Circle"' },
+  { key: 'writer', value: `"${blog.name}"` },
+  { key: 'impact', value: '"-30% operational risk"' },
+  { key: 'shipped', value: `"${projects.length} projects shipped"` },
 ];
 
 const listContainer = {
@@ -51,28 +51,21 @@ export default function AvatarShowcase() {
           </Reveal>
 
           <p className="avatar-showcase__unlock-label">achievements.unlocked()</p>
-          <motion.div
-            className="avatar-showcase__badges"
+          <motion.ul
+            className="avatar-showcase__achievements"
             variants={listContainer}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: '-60px' }}
           >
             {achievements.map((a) => (
-              <motion.div
-                key={a.name}
-                className="gh-medal"
-                variants={listItem}
-                style={{ '--badge-color': a.color }}
-                title={`${a.name} — ${a.detail}`}
-              >
-                <div className="gh-medal__circle">
-                  <a.icon className="gh-medal__icon" />
-                </div>
-                <span className="gh-medal__name">{a.name}</span>
-              </motion.div>
+              <motion.li key={a.key} className="avatar-showcase__achievement-line" variants={listItem}>
+                <FiCheck className="avatar-showcase__check" />
+                <span className="avatar-showcase__key">{a.key}</span>
+                <span className="avatar-showcase__value">{a.value}</span>
+              </motion.li>
             ))}
-          </motion.div>
+          </motion.ul>
         </div>
       </div>
     </section>
