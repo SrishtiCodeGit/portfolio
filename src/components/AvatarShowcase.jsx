@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiCheck } from 'react-icons/fi';
 import Reveal from './Reveal';
+import { riskColor } from '../utils/riskColor';
 import { profile, hackathon, projects, blog } from '../data/resumeData';
 import './AvatarShowcase.css';
 
@@ -58,13 +59,21 @@ export default function AvatarShowcase() {
             whileInView="show"
             viewport={{ once: true, margin: '-60px' }}
           >
-            {achievements.map((a) => (
-              <motion.li key={a.key} className="avatar-showcase__achievement-line" variants={listItem}>
-                <FiCheck className="avatar-showcase__check" />
-                <span className="avatar-showcase__key">{a.key}</span>
-                <span className="avatar-showcase__value">{a.value}</span>
-              </motion.li>
-            ))}
+            {achievements.map((a, i) => {
+              const color = riskColor(i / (achievements.length - 1));
+              return (
+                <motion.li
+                  key={a.key}
+                  className="avatar-showcase__achievement-line"
+                  variants={listItem}
+                  style={{ '--row-color': color }}
+                >
+                  <FiCheck className="avatar-showcase__check" />
+                  <span className="avatar-showcase__key">{a.key}</span>
+                  <span className="avatar-showcase__value">{a.value}</span>
+                </motion.li>
+              );
+            })}
           </motion.ul>
         </div>
       </div>

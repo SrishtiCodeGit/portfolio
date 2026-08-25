@@ -38,20 +38,37 @@
 .avatar-showcase__achievements {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .avatar-showcase__achievement-line {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
   font-family: var(--font-mono);
   font-size: 14px;
+  padding: 13px 18px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--row-color) 16%, var(--bg-card));
+  border: 1px solid color-mix(in srgb, var(--row-color) 45%, transparent);
+  border-left: 3px solid var(--row-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.avatar-showcase__check {
-  align-self: center;
+.avatar-showcase__achievement-line:hover {
+  transform: translateX(5px);
+  background: color-mix(in srgb, var(--row-color) 26%, var(--bg-card));
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.avatar-showcase__achievement-line .avatar-showcase__check {
   flex-shrink: 0;
-  font-size: 13px;
-  color: var(--risk-low);
+  font-size: 14px;
+  color: var(--row-color);
+}
+
+.avatar-showcase__achievement-line .avatar-showcase__key {
+  color: var(--row-color);
+  font-weight: 700;
 }
