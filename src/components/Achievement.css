@@ -81,6 +81,37 @@
   margin-bottom: 28px;
 }
 
+.achievement__sponsors {
+  margin-bottom: 28px;
+}
+
+.achievement__sponsors-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 12px;
+}
+
+.achievement__sponsors-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.achievement__sponsor-logo {
+  height: 28px;
+  max-width: 96px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 7px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
 .achievement__team {
   margin-bottom: 32px;
 }

@@ -4,6 +4,10 @@ import isroLogo from '../assets/logos/isro.png';
 import csirLogo from '../assets/logos/csir.png';
 import samsungLogo from '../assets/logos/samsung.png';
 import abfinanceLogo from '../assets/logos/abfinance.png';
+import mongodbLogo from '../assets/logos/mongodb.svg';
+import nvidiaLogo from '../assets/logos/nvidia.svg';
+import dellLogo from '../assets/logos/dell.svg';
+import builderbaseLogo from '../assets/logos/builderbase.png';
 import systemicAiChartImage from '../assets/projects/systemic-ai-chart.png';
 import circleShotImage from '../assets/projects/circle-shot.jpg';
 import elninoShotImage from '../assets/projects/elnino-shot.jpg';
@@ -29,7 +33,7 @@ export const hackathon = {
   projectName: "Breadcrumbs",
   award: "Best Use of MongoDB",
   prize: "$1,000 Prize",
-  event: "Dell x NVIDIA AI Factory Hackathon",
+  event: "MongoDB × Dell × NVIDIA AI Hackathon",
   eventLocation: "NYC",
   eventUrl: "https://builderbase.com/event/dell-x-nvidia-ai-hackathon-nyc",
   githubUrl: "https://github.com/TheApexWu/breadcrumbs",
@@ -38,6 +42,12 @@ export const hackathon = {
   tagline: "An always-on food-safety agent that runs entirely offline, built in one day.",
   team: ["Srishti Chauhan", "Alex", "Nick", "Ola", "Richard"],
   slug: "breadcrumbs",
+  sponsors: [
+    { name: "MongoDB", logo: mongodbLogo },
+    { name: "NVIDIA", logo: nvidiaLogo },
+    { name: "Dell", logo: dellLogo },
+    { name: "Builderbase", logo: builderbaseLogo },
+  ],
 };
 
 export const education = [

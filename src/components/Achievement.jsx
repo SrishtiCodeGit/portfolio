@@ -15,7 +15,7 @@ export default function Achievement() {
             <div className="achievement__grid">
               <div className="achievement__info">
                 <span className="achievement__trophy">
-                  <FiAward /> Hackathon Winner
+                  <FiAward /> Hackathon Winner · {hackathon.eventLocation}
                 </span>
                 <h2 className="achievement__title">{hackathon.projectName}</h2>
                 <p className="achievement__award">
@@ -25,6 +25,21 @@ export default function Achievement() {
                   {hackathon.event} · {hackathon.eventLocation}
                 </p>
                 <p className="achievement__tagline">{hackathon.tagline}</p>
+
+                <div className="achievement__sponsors">
+                  <span className="achievement__sponsors-label">Presented by</span>
+                  <div className="achievement__sponsors-list">
+                    {hackathon.sponsors.map((s) => (
+                      <img
+                        key={s.name}
+                        src={s.logo}
+                        alt={s.name}
+                        title={s.name}
+                        className="achievement__sponsor-logo"
+                      />
+                    ))}
+                  </div>
+                </div>
 
                 <div className="achievement__team">
                   <span className="achievement__team-label">Team</span>
