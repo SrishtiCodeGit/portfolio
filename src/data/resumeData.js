@@ -8,6 +8,7 @@ import mongodbLogo from '../assets/logos/mongodb.svg';
 import nvidiaLogo from '../assets/logos/nvidia.svg';
 import dellLogo from '../assets/logos/dell.svg';
 import builderbaseLogo from '../assets/logos/builderbase.png';
+import srmLogo from '../assets/logos/srm.png';
 import systemicAiChartImage from '../assets/projects/systemic-ai-chart.png';
 import circleShotImage from '../assets/projects/circle-shot.jpg';
 import elninoShotImage from '../assets/projects/elnino-shot.jpg';
@@ -80,7 +81,7 @@ export const education = [
   {
     slug: "srm-institute",
     school: "SRM Institute of Science and Technology",
-    logo: null,
+    logo: srmLogo,
     isAlmaMater: false,
     location: "Chennai, India",
     degree: "Bachelor of Technology, Computer Science and Information Technology",
