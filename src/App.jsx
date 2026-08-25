@@ -13,6 +13,7 @@ import EducationDetail from './pages/EducationDetail';
 import ProjectDetail from './pages/ProjectDetail';
 import Achievement from './components/Achievement';
 import AvatarShowcase from './components/AvatarShowcase';
+import RunningAvatar from './components/RunningAvatar';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -35,7 +36,7 @@ function App() {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-          <Route path="/achievements" element={<PageTransition><SectionPage><Achievement /><AvatarShowcase /></SectionPage></PageTransition>} />
+          <Route path="/achievements" element={<PageTransition><SectionPage><Achievement /><AvatarShowcase /><RunningAvatar /></SectionPage></PageTransition>} />
           <Route path="/education" element={<PageTransition><SectionPage><About /></SectionPage></PageTransition>} />
           <Route path="/education/:slug" element={<PageTransition><EducationDetail /></PageTransition>} />
           <Route path="/experience" element={<PageTransition><SectionPage><Experience /></SectionPage></PageTransition>} />

@@ -1,0 +1,23 @@
+.running-avatar-track {
+  position: relative;
+  height: 64px;
+  margin-top: 48px;
+  overflow: hidden;
+}
+
+.running-avatar-track__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  border-bottom: 2px dashed var(--border);
+}
+
+.running-avatar {
+  position: absolute;
+  left: 0;
+  bottom: 14px;
+  width: 30px;
+  height: 37px;
+  shape-rendering: crispEdges;
+}
