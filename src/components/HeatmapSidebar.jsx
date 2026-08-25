@@ -24,8 +24,8 @@ export default function HeatmapSidebar() {
           <Link
             key={tile.label}
             to={tile.href}
-            className={`heatmap-sidebar__tile ${isActive ? 'is-active' : ''}`}
-            style={{ '--tile-color': color }}
+            className={`heatmap-sidebar__tile heatmap-sidebar__tile--intro ${isActive ? 'is-active' : ''}`}
+            style={{ '--tile-color': color, animationDelay: `${2.9 + i * 0.16}s` }}
           >
             <span className="heatmap-sidebar__label">{tile.label}</span>
           </Link>

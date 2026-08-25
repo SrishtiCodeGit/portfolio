@@ -20,6 +20,7 @@ const EYES = [[2, 3], [5, 3]];
 
 export default function PixelRobot() {
   const [path, setPath] = useState(null);
+  const [landed, setLanded] = useState(false);
 
   useEffect(() => {
     if (window.matchMedia('(pointer: coarse)').matches) return;
@@ -39,7 +40,7 @@ export default function PixelRobot() {
         endX: tileRect.left + 6,
         endY: tileRect.top - 36,
       });
-    }, 750);
+    }, 900);
 
     return () => {
       cancelled = true;
@@ -66,18 +67,24 @@ export default function PixelRobot() {
         y: [startY, apex1, midY, apex2, endY],
         opacity: [0, 1, 1, 1, 1],
       }}
-      transition={{ duration: 1.3, times: [0, 0.3, 0.5, 0.8, 1], ease: 'easeInOut' }}
+      transition={{ duration: 2.1, times: [0, 0.3, 0.5, 0.8, 1], ease: 'easeInOut' }}
+      onAnimationComplete={() => setLanded(true)}
       style={{ position: 'fixed', top: 0, left: 0 }}
     >
-      {BODY.map(([x, y]) => (
-        <rect key={`b-${x}-${y}`} x={x} y={y} width="1" height="1" className="pixel-robot__px pixel-robot__px--body" />
-      ))}
-      {EYES.map(([x, y]) => (
-        <rect key={`e-${x}-${y}`} x={x} y={y} width="1" height="1" className="pixel-robot__px pixel-robot__px--eye" />
-      ))}
-      {ANTENNA.map(([x, y]) => (
-        <rect key={`a-${x}-${y}`} x={x} y={y} width="1" height="1" className="pixel-robot__px pixel-robot__px--antenna" />
-      ))}
+      <motion.g
+        animate={landed ? { y: [0, -0.9, 0] } : { y: 0 }}
+        transition={landed ? { duration: 1.6, repeat: Infinity, ease: 'easeInOut' } : undefined}
+      >
+        {BODY.map(([x, y]) => (
+          <rect key={`b-${x}-${y}`} x={x} y={y} width="1" height="1" className="pixel-robot__px pixel-robot__px--body" />
+        ))}
+        {EYES.map(([x, y]) => (
+          <rect key={`e-${x}-${y}`} x={x} y={y} width="1" height="1" className="pixel-robot__px pixel-robot__px--eye" />
+        ))}
+        {ANTENNA.map(([x, y]) => (
+          <rect key={`a-${x}-${y}`} x={x} y={y} width="1" height="1" className="pixel-robot__px pixel-robot__px--antenna" />
+        ))}
+      </motion.g>
     </motion.svg>
   );
 }
