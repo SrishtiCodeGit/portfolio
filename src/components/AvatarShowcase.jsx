@@ -5,12 +5,12 @@ import { profile, hackathon, projects, blog } from '../data/resumeData';
 import './AvatarShowcase.css';
 
 const achievements = [
-  { icon: '🏆', text: `${hackathon.award} — Hackathon Winner` },
-  { icon: '🎓', text: 'M.S. Enterprise Risk Management, Columbia University' },
-  { icon: '🚀', text: 'Founder of Circle, a live artist-collaboration platform' },
-  { icon: '✍️', text: `Writer at ${blog.name}, on AI and risk` },
-  { icon: '📊', text: 'Cut operational risk 30% for enterprise CRM rollouts' },
-  { icon: '💼', text: `${projects.length} projects shipped, from hackathons to production` },
+  { label: 'hackathon', value: hackathon.award, color: '#f5b942' },
+  { label: 'education', value: 'M.S. ERM · Columbia', color: '#3b82f6' },
+  { label: 'founder', value: 'Circle', color: '#a855f7' },
+  { label: 'writer', value: blog.name, color: '#ec4899' },
+  { label: 'impact', value: '-30% operational risk', color: '#22c55e' },
+  { label: 'shipped', value: `${projects.length} projects`, color: '#f97316' },
 ];
 
 const listContainer = {
@@ -75,20 +75,25 @@ export default function AvatarShowcase() {
             </Reveal>
 
             <p className="avatar-showcase__unlock-label">achievements.unlocked()</p>
-            <motion.ul
-              className="avatar-showcase__list"
+            <motion.div
+              className="avatar-showcase__badges"
               variants={listContainer}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, margin: '-60px' }}
             >
               {achievements.map((a) => (
-                <motion.li key={a.text} variants={listItem}>
-                  <span className="avatar-showcase__list-icon">{a.icon}</span>
-                  {a.text}
-                </motion.li>
+                <motion.span
+                  key={a.label}
+                  className="gh-badge"
+                  variants={listItem}
+                  style={{ '--badge-color': a.color }}
+                >
+                  <span className="gh-badge__label">{a.label}</span>
+                  <span className="gh-badge__value">{a.value}</span>
+                </motion.span>
               ))}
-            </motion.ul>
+            </motion.div>
           </div>
         </div>
       </div>
