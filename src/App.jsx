@@ -3,7 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import CursorGlow from './components/CursorGlow';
+import CursorArrow from './components/CursorArrow';
 import HeatmapSidebar from './components/HeatmapSidebar';
 import PageTransition from './components/PageTransition';
 import Home from './pages/Home';
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <CursorGlow />
+      <CursorArrow />
       <ScrollToTop />
       <Navbar />
       <HeatmapSidebar />

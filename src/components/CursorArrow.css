@@ -1,0 +1,30 @@
+.cursor-arrow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 38px;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  shape-rendering: crispEdges;
+}
+
+.cursor-arrow__px--outline {
+  fill: #0c0e13;
+}
+
+.cursor-arrow__px--fill {
+  fill: var(--risk-low, #22c55e);
+}
+
+@media (max-width: 900px) {
+  .cursor-arrow {
+    display: none;
+  }
+}
+
+body.cursor-arrow-active,
+body.cursor-arrow-active * {
+  cursor: none !important;
+}
