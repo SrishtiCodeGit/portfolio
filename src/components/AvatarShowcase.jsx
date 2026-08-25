@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion';
+import { FiAward, FiBookOpen, FiZap, FiEdit3, FiTrendingDown, FiPackage } from 'react-icons/fi';
 import Reveal from './Reveal';
-import avatar3d from '../assets/avatar-3d.png';
 import { profile, hackathon, projects, blog } from '../data/resumeData';
 import './AvatarShowcase.css';
 
 const achievements = [
-  { emoji: '🏆', name: 'Hackathon Champ', detail: hackathon.award, color: '#f5b942' },
-  { emoji: '🎓', name: 'Risk Scholar', detail: 'M.S. ERM · Columbia', color: '#3b82f6' },
-  { emoji: '🚀', name: 'Founder Mode', detail: 'Circle', color: '#a855f7' },
-  { emoji: '✍️', name: 'Prolific Writer', detail: blog.name, color: '#ec4899' },
-  { emoji: '📉', name: 'Risk Cutter', detail: '-30% operational risk', color: '#22c55e' },
-  { emoji: '💼', name: 'Ship It', detail: `${projects.length} projects shipped`, color: '#f97316' },
+  { icon: FiAward, name: 'Hackathon Champ', detail: hackathon.award, color: '#f5b942' },
+  { icon: FiBookOpen, name: 'Risk Scholar', detail: 'M.S. ERM · Columbia', color: '#3b82f6' },
+  { icon: FiZap, name: 'Founder Mode', detail: 'Circle', color: '#a855f7' },
+  { icon: FiEdit3, name: 'Prolific Writer', detail: blog.name, color: '#ec4899' },
+  { icon: FiTrendingDown, name: 'Risk Cutter', detail: '-30% operational risk', color: '#22c55e' },
+  { icon: FiPackage, name: 'Ship It', detail: `${projects.length} projects shipped`, color: '#f97316' },
 ];
 
 const listContainer = {
@@ -34,70 +34,45 @@ export default function AvatarShowcase() {
           </h2>
         </Reveal>
 
-        <div className="avatar-showcase__grid">
+        <div className="avatar-showcase__panel">
           <Reveal delay={0.1}>
-            <div className="avatar-showcase__stage">
-              <motion.div
-                className="avatar-showcase__ring"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 14, repeat: Infinity, ease: 'linear' }}
-              />
-              <motion.div
-                className="avatar-showcase__ring avatar-showcase__ring--reverse"
-                animate={{ rotate: -360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-              />
-              <motion.img
-                src={avatar3d}
-                alt={`3D avatar of ${profile.name}`}
-                className="avatar-showcase__img"
-                animate={{ scaleX: [1, 0.08, -1, -0.08, 1] }}
-                transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', times: [0, 0.25, 0.5, 0.75, 1] }}
-              />
-              <span className="avatar-showcase__caption">Generated with Meshy AI</span>
+            <div className="avatar-showcase__stat-line">
+              <span className="avatar-showcase__key">class</span>
+              <span className="avatar-showcase__value">"Risk Analyst × AI Builder"</span>
+            </div>
+            <div className="avatar-showcase__stat-line">
+              <span className="avatar-showcase__key">focus</span>
+              <span className="avatar-showcase__value">["Enterprise Risk", "Machine Learning", "Full-Stack Dev"]</span>
+            </div>
+            <div className="avatar-showcase__stat-line">
+              <span className="avatar-showcase__key">based_in</span>
+              <span className="avatar-showcase__value">"{profile.location}"</span>
             </div>
           </Reveal>
 
-          <div className="avatar-showcase__panel">
-            <Reveal delay={0.15}>
-              <div className="avatar-showcase__stat-line">
-                <span className="avatar-showcase__key">class</span>
-                <span className="avatar-showcase__value">"Risk Analyst × AI Builder"</span>
-              </div>
-              <div className="avatar-showcase__stat-line">
-                <span className="avatar-showcase__key">focus</span>
-                <span className="avatar-showcase__value">["Enterprise Risk", "Machine Learning", "Full-Stack Dev"]</span>
-              </div>
-              <div className="avatar-showcase__stat-line">
-                <span className="avatar-showcase__key">based_in</span>
-                <span className="avatar-showcase__value">"{profile.location}"</span>
-              </div>
-            </Reveal>
-
-            <p className="avatar-showcase__unlock-label">achievements.unlocked()</p>
-            <motion.div
-              className="avatar-showcase__badges"
-              variants={listContainer}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: '-60px' }}
-            >
-              {achievements.map((a) => (
-                <motion.div
-                  key={a.name}
-                  className="gh-medal"
-                  variants={listItem}
-                  style={{ '--badge-color': a.color }}
-                  title={`${a.name} — ${a.detail}`}
-                >
-                  <div className="gh-medal__circle">
-                    <span className="gh-medal__emoji">{a.emoji}</span>
-                  </div>
-                  <span className="gh-medal__name">{a.name}</span>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
+          <p className="avatar-showcase__unlock-label">achievements.unlocked()</p>
+          <motion.div
+            className="avatar-showcase__badges"
+            variants={listContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-60px' }}
+          >
+            {achievements.map((a) => (
+              <motion.div
+                key={a.name}
+                className="gh-medal"
+                variants={listItem}
+                style={{ '--badge-color': a.color }}
+                title={`${a.name} — ${a.detail}`}
+              >
+                <div className="gh-medal__circle">
+                  <a.icon className="gh-medal__icon" />
+                </div>
+                <span className="gh-medal__name">{a.name}</span>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
