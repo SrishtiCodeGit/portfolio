@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import CursorGlow from './components/CursorGlow';
+import HeatmapSidebar from './components/HeatmapSidebar';
 import PageTransition from './components/PageTransition';
 import Home from './pages/Home';
 import EducationDetail from './pages/EducationDetail';
@@ -17,6 +18,7 @@ function App() {
       <CursorGlow />
       <ScrollToTop />
       <Navbar />
+      <HeatmapSidebar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<PageTransition><Home /></PageTransition>} />
