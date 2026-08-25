@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
 import { profile } from '../data/resumeData';
 import profilePhoto from '../assets/profile.jpg';
 import columbiaLogo from '../assets/logos/columbia.png';
@@ -56,11 +55,6 @@ export default function Hero() {
             <Link to="/contact" className="btn btn--ghost">
               Get in Touch
             </Link>
-          </motion.div>
-          <motion.div variants={item} className="hero__socials">
-            <a href={`mailto:${profile.email}`} aria-label="Email"><FiMail /></a>
-            <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><FiLinkedin /></a>
-            <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><FiGithub /></a>
           </motion.div>
         </motion.div>
 
