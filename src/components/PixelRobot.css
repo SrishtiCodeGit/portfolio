@@ -1,0 +1,25 @@
+.pixel-robot {
+  width: 34px;
+  height: 42px;
+  pointer-events: none;
+  z-index: 60;
+  shape-rendering: crispEdges;
+}
+
+.pixel-robot__px--body {
+  fill: var(--risk-low, #22c55e);
+}
+
+.pixel-robot__px--eye {
+  fill: #0c0e13;
+}
+
+.pixel-robot__px--antenna {
+  fill: var(--risk-mid, #eab308);
+}
+
+@media (max-width: 1439px) {
+  .pixel-robot {
+    display: none;
+  }
+}

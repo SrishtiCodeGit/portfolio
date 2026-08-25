@@ -72,6 +72,26 @@
   transform: scaleX(1);
 }
 
+.navbar__socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar__socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 17px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar__socials a:hover {
+  color: var(--accent-strong);
+  transform: translateY(-2px);
+}
+
 .navbar__cta {
   font-size: 14px;
   font-weight: 600;
@@ -120,6 +140,7 @@
 
 @media (max-width: 800px) {
   .navbar__links,
+  .navbar__socials,
   .navbar__cta {
     display: none;
   }

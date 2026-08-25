@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import CursorArrow from './components/CursorArrow';
 import HeatmapSidebar from './components/HeatmapSidebar';
+import PixelRobot from './components/PixelRobot';
 import PageTransition from './components/PageTransition';
 import SectionPage from './pages/SectionPage';
 import Home from './pages/Home';
@@ -30,6 +31,7 @@ function App() {
       <ScrollToTop />
       <Navbar />
       <HeatmapSidebar />
+      <PixelRobot />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<PageTransition><Home /></PageTransition>} />

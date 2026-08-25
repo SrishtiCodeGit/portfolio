@@ -1,15 +1,13 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
+import { profile } from '../data/resumeData';
 import './Navbar.css';
 
 const links = [
   { href: '/education', label: 'About' },
-  { href: '/experience', label: 'Experience' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/blog', label: 'Blog' },
   { href: '/skills', label: 'Skills' },
-  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
@@ -38,6 +36,11 @@ export default function Navbar() {
             <Link key={l.href} to={l.href} className="navbar__link">{l.label}</Link>
           ))}
         </nav>
+        <div className="navbar__socials">
+          <a href={`mailto:${profile.email}`} aria-label="Email"><FiMail /></a>
+          <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><FiLinkedin /></a>
+          <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><FiGithub /></a>
+        </div>
         <Link to="/contact" className="navbar__cta">Let's talk</Link>
         <button
           className={`navbar__toggle ${open ? 'is-open' : ''}`}
