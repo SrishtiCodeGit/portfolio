@@ -5,12 +5,12 @@ import { profile, hackathon, projects, blog } from '../data/resumeData';
 import './AvatarShowcase.css';
 
 const achievements = [
-  { label: 'hackathon', value: hackathon.award, color: '#f5b942' },
-  { label: 'education', value: 'M.S. ERM · Columbia', color: '#3b82f6' },
-  { label: 'founder', value: 'Circle', color: '#a855f7' },
-  { label: 'writer', value: blog.name, color: '#ec4899' },
-  { label: 'impact', value: '-30% operational risk', color: '#22c55e' },
-  { label: 'shipped', value: `${projects.length} projects`, color: '#f97316' },
+  { emoji: '🏆', name: 'Hackathon Champ', detail: hackathon.award, color: '#f5b942' },
+  { emoji: '🎓', name: 'Risk Scholar', detail: 'M.S. ERM · Columbia', color: '#3b82f6' },
+  { emoji: '🚀', name: 'Founder Mode', detail: 'Circle', color: '#a855f7' },
+  { emoji: '✍️', name: 'Prolific Writer', detail: blog.name, color: '#ec4899' },
+  { emoji: '📉', name: 'Risk Cutter', detail: '-30% operational risk', color: '#22c55e' },
+  { emoji: '💼', name: 'Ship It', detail: `${projects.length} projects shipped`, color: '#f97316' },
 ];
 
 const listContainer = {
@@ -83,15 +83,18 @@ export default function AvatarShowcase() {
               viewport={{ once: true, margin: '-60px' }}
             >
               {achievements.map((a) => (
-                <motion.span
-                  key={a.label}
-                  className="gh-badge"
+                <motion.div
+                  key={a.name}
+                  className="gh-medal"
                   variants={listItem}
                   style={{ '--badge-color': a.color }}
+                  title={`${a.name} — ${a.detail}`}
                 >
-                  <span className="gh-badge__label">{a.label}</span>
-                  <span className="gh-badge__value">{a.value}</span>
-                </motion.span>
+                  <div className="gh-medal__circle">
+                    <span className="gh-medal__emoji">{a.emoji}</span>
+                  </div>
+                  <span className="gh-medal__name">{a.name}</span>
+                </motion.div>
               ))}
             </motion.div>
           </div>
