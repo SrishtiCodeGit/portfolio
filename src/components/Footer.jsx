@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <p>© {new Date().getFullYear()} {profile.name}</p>
-        <Link to="/">Back to dashboard ↑</Link>
+        <Link to="/#top">Back to top ↑</Link>
       </div>
     </footer>
   );

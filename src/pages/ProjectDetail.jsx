@@ -22,7 +22,7 @@ export default function ProjectDetail() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <Link to="/projects" className="detail-back">
+          <Link to="/#projects" className="detail-back">
             <FiArrowLeft /> Back to projects
           </Link>
         </motion.div>
@@ -94,7 +94,7 @@ export default function ProjectDetail() {
               {project.noLinkReason || `${project.linkLabel} link coming soon`}
             </span>
           )}
-          <Link to="/projects" className="btn btn--ghost">Back to Projects</Link>
+          <Link to="/#projects" className="btn btn--ghost">Back to Projects</Link>
         </motion.div>
       </div>
     </div>

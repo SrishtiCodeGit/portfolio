@@ -90,12 +90,6 @@ button {
   padding: 120px 0;
 }
 
-html.lock-scroll,
-body.lock-scroll {
-  height: 100%;
-  overflow: hidden;
-}
-
 .section-label {
   display: inline-flex;
   align-items: center;

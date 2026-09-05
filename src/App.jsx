@@ -24,7 +24,6 @@ import Contact from './components/Contact';
 
 function App() {
   const location = useLocation();
-  const isHome = location.pathname === '/';
 
   return (
     <>
@@ -48,7 +47,7 @@ function App() {
           <Route path="/contact" element={<PageTransition><SectionPage><Contact /></SectionPage></PageTransition>} />
         </Routes>
       </AnimatePresence>
-      {!isHome && <Footer />}
+      <Footer />
     </>
   );
 }

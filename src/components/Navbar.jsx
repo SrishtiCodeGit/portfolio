@@ -6,8 +6,8 @@ import { profile } from '../data/resumeData';
 import './Navbar.css';
 
 const links = [
-  { href: '/education', label: 'About' },
-  { href: '/skills', label: 'Skills' },
+  { href: '/#about', label: 'About' },
+  { href: '/#skills', label: 'Skills' },
 ];
 
 export default function Navbar() {
@@ -28,7 +28,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="container navbar__inner">
-        <Link to="/" className="navbar__logo">
+        <Link to="/#top" className="navbar__logo">
           SC<span>.</span>
         </Link>
         <nav className="navbar__links">
@@ -41,7 +41,7 @@ export default function Navbar() {
           <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><FiLinkedin /></a>
           <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><FiGithub /></a>
         </div>
-        <Link to="/contact" className="navbar__cta">Let's talk</Link>
+        <Link to="/#contact" className="navbar__cta">Let's talk</Link>
         <button
           className={`navbar__toggle ${open ? 'is-open' : ''}`}
           aria-label="Toggle menu"
