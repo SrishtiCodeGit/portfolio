@@ -22,8 +22,8 @@
 
 .logo-badge--has-image {
   background: #ffffff;
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  border-color: var(--border);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 
 .logo-badge__img {
