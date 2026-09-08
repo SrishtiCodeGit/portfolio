@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { profile } from '../data/resumeData';
 import profilePhoto from '../assets/profile.jpg';
 import columbiaLogo from '../assets/logos/columbia.png';
-import TerminalIntro from './TerminalIntro';
 import RiskMatrixBg from './RiskMatrixBg';
 import './Hero.css';
 
@@ -26,9 +25,6 @@ export default function Hero() {
       <RiskMatrixBg />
       <div className="container hero__inner">
         <motion.div variants={container} initial="hidden" animate="show" className="hero__text">
-          <motion.div variants={item}>
-            <TerminalIntro />
-          </motion.div>
           <motion.h1 variants={item} className="hero__name">
             {profile.name}
           </motion.h1>
