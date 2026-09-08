@@ -155,6 +155,27 @@ export const experience = [
 
 export const projects = [
   {
+    slug: "el-nino-financial-risk-dashboard",
+    title: "El Niño Financial Risk Dashboard",
+    period: "2025 to 2026",
+    tech: ["Python", "NumPy", "Matplotlib", "Streamlit", "JavaScript", "Node.js", "NOAA/ERA5 Data"],
+    link: "https://elnino-dashboard-sigma.vercel.app",
+    linkLabel: "Live App",
+    domain: "vercel.app · El Niño Dashboard",
+    image: elninoShotImage,
+    graphic: "climate",
+    tagline: "Turning climate cycles into quantified financial exposure.",
+    bullets: [
+      "Built an interactive dashboard to model and visualize financial risk implications of El Niño climate cycles using NOAA and ERA5 geospatial datasets.",
+      "Applied ML models and statistical risk frameworks to forecast climate-driven economic impacts, enabling scenario-based risk analysis across commodity and agricultural sectors with quantified financial exposure estimates.",
+    ],
+    longDescription: [
+      "Climate cycles like El Niño move real money (agricultural yields, commodity prices, insurance exposure), but that risk rarely shows up in a format finance teams can act on. This dashboard closes that gap.",
+      "It pulls live ENSO (El Niño-Southern Oscillation) status alongside NOAA Climate Prediction Center and ERA5 geospatial data, then runs statistical and ML models to translate climate signals into scenario-based financial exposure across commodities, agriculture, and insurance/banking.",
+      "The live app tracks current ENSO status in real time and lets you drill into financial markets, commodities, and cryptocurrency views to see how a given climate regime propagates through each sector.",
+    ],
+  },
+  {
     slug: "breadcrumbs",
     title: "Breadcrumbs — On-Prem Food-Safety Agent",
     period: "2026",
@@ -198,27 +219,6 @@ export const projects = [
       "Most portfolio diversification models assume sector spread is enough to limit downside risk. This project asked what happens when the AI infrastructure underneath every sector is the same handful of providers.",
       "Using real-time S&P 500 constituent data, I mapped which companies share AI infrastructure dependencies (cloud compute, foundation models, chip supply) and ran correlation analysis to surface concentration that standard sector-diversification metrics miss entirely.",
       "The scenario models estimate that a shock to shared AI infrastructure providers could produce downside exposure of up to 69%, even in portfolios that look well-diversified on paper, a finding aimed at risk teams evaluating systemic, cross-sector dependencies rather than just single-stock risk.",
-    ],
-  },
-  {
-    slug: "el-nino-financial-risk-dashboard",
-    title: "El Niño Financial Risk Dashboard",
-    period: "2025 to 2026",
-    tech: ["Python", "NumPy", "Matplotlib", "Streamlit", "JavaScript", "Node.js", "NOAA/ERA5 Data"],
-    link: "https://elnino-financial-dashboardgit-bunlcerb4vkrcyhaqfmbaf.streamlit.app",
-    linkLabel: "Streamlit App",
-    domain: "streamlit.app · El Niño Dashboard",
-    image: elninoShotImage,
-    graphic: "climate",
-    tagline: "Turning climate cycles into quantified financial exposure.",
-    bullets: [
-      "Built an interactive Streamlit dashboard to model and visualize financial risk implications of El Niño climate cycles using NOAA and ERA5 geospatial datasets.",
-      "Applied ML models and statistical risk frameworks to forecast climate-driven economic impacts, enabling scenario-based risk analysis across commodity and agricultural sectors with quantified financial exposure estimates.",
-    ],
-    longDescription: [
-      "Climate cycles like El Niño move real money (agricultural yields, commodity prices, insurance exposure), but that risk rarely shows up in a format finance teams can act on. This dashboard closes that gap.",
-      "It pulls live ENSO (El Niño-Southern Oscillation) status alongside NOAA Climate Prediction Center and ERA5 geospatial data, then runs statistical and ML models to translate climate signals into scenario-based financial exposure across commodities, agriculture, and insurance/banking.",
-      "The live app tracks current ENSO status in real time and lets you drill into financial markets, commodities, and cryptocurrency views to see how a given climate regime propagates through each sector.",
     ],
   },
   {
