@@ -17,8 +17,8 @@ const photos = [
   { src: leadsquaredPhoto, position: '50% 35%' },
 ];
 
-const SHOW_MS = 6500;
-const FADE_S = 2.6;
+const SHOW_MS = 3800;
+const FADE_S = 1.5;
 
 export default function HeroBackdrop() {
   const [index, setIndex] = useState(0);
