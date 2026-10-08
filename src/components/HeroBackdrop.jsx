@@ -1,16 +1,11 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import teamPhoto from '../assets/hackathon/team.webp';
-import prizePhoto from '../assets/hackathon/prize.jpg';
-import demoPhoto from '../assets/hackathon/demo.jpg';
-import silhouettePhoto from '../assets/hackathon/silhouette.jpg';
-import crowdPhoto from '../assets/hackathon/crowd.webp';
-import unWomenPair from '../assets/community/un-women-pair.jpg';
-import unWomenGroup from '../assets/community/un-women-group.jpg';
+import prizePhoto from '../assets/hackathon/prize.webp';
+import unWomenPair from '../assets/community/un-women-pair.webp';
 import columbiaPhoto from '../assets/education/columbia-campus.webp';
-import srmPhoto from '../assets/education/srm-graduation.jpg';
-import leadsquaredPhoto from '../assets/experience/leadsquared-post.jpg';
-import isroPhoto from '../assets/experience/isro-irnss-launch.jpg';
+import srmPhoto from '../assets/education/srm-graduation.webp';
+import leadsquaredPhoto from '../assets/experience/leadsquared-post.webp';
 import './HeroBackdrop.css';
 
 const photos = [
@@ -20,11 +15,6 @@ const photos = [
   { src: srmPhoto, position: '50% 30%' },
   { src: prizePhoto, position: '50% 50%' },
   { src: leadsquaredPhoto, position: '50% 35%' },
-  { src: unWomenGroup, position: '50% 55%' },
-  { src: isroPhoto, position: '50% 50%' },
-  { src: silhouettePhoto, position: '50% 50%' },
-  { src: demoPhoto, position: '50% 40%' },
-  { src: crowdPhoto, position: '50% 55%' },
 ];
 
 const SHOW_MS = 6500;

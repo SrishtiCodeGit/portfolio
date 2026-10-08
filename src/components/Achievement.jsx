@@ -6,10 +6,10 @@ import LogoBadge from './LogoBadge';
 import YouTubeEmbed from './YouTubeEmbed';
 import { hackathon } from '../data/resumeData';
 import teamPhoto from '../assets/hackathon/team.webp';
-import prizePhoto from '../assets/hackathon/prize.jpg';
+import prizePhoto from '../assets/hackathon/prize.webp';
 import crowdPhoto from '../assets/hackathon/crowd.webp';
-import demoPhoto from '../assets/hackathon/demo.jpg';
-import silhouettePhoto from '../assets/hackathon/silhouette.jpg';
+import demoPhoto from '../assets/hackathon/demo.webp';
+import silhouettePhoto from '../assets/hackathon/silhouette.webp';
 import './Achievement.css';
 
 const gallery = [
@@ -44,6 +44,11 @@ export default function Achievement() {
                   {hackathon.event} · {hackathon.eventLocation}
                 </p>
                 <p className="achievement__tagline">{hackathon.tagline}</p>
+                <div className="achievement__stats">
+                  {hackathon.stats.map((stat) => (
+                    <span className="pill" key={stat}>{stat}</span>
+                  ))}
+                </div>
 
                 <div className="achievement__sponsors">
                   <span className="achievement__sponsors-label">Presented by</span>

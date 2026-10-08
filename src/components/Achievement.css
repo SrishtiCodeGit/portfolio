@@ -235,3 +235,10 @@
     grid-column: span 1 !important;
   }
 }
+
+.achievement__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 20px;
+}

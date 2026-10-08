@@ -9,9 +9,9 @@ import nvidiaLogo from '../assets/logos/nvidia.svg';
 import dellLogo from '../assets/logos/dell.svg';
 import builderbaseLogo from '../assets/logos/builderbase.png';
 import srmLogo from '../assets/logos/srm.png';
-import leadsquaredPostPhoto from '../assets/experience/leadsquared-post.jpg';
-import isroLaunchPhoto from '../assets/experience/isro-irnss-launch.jpg';
-import srmGraduationPhoto from '../assets/education/srm-graduation.jpg';
+import leadsquaredPostPhoto from '../assets/experience/leadsquared-post.webp';
+import isroLaunchPhoto from '../assets/experience/isro-irnss-launch.webp';
+import srmGraduationPhoto from '../assets/education/srm-graduation.webp';
 import columbiaCampusPhoto from '../assets/education/columbia-campus.webp';
 import systemicAiChartImage from '../assets/projects/systemic-ai-chart.png';
 import circleShotImage from '../assets/projects/circle-shot.jpg';
@@ -45,6 +45,7 @@ export const hackathon = {
   videoId: "_ndw5fS4UO0",
   videoThumb: breadcrumbsThumb,
   tagline: "An always-on food-safety agent that runs entirely offline, built in one day.",
+  stats: ["Built in 12 hours", "Top 7 finalist"],
   team: ["Srishti Chauhan", "Alex", "Nick", "Ola", "Richard"],
   slug: "breadcrumbs",
   linkedinPost: "https://www.linkedin.com/feed/update/urn:li:activity:7498465884093583361/",

@@ -1,6 +1,6 @@
 import Reveal from './Reveal';
-import pairPhoto from '../assets/community/un-women-pair.jpg';
-import groupPhoto from '../assets/community/un-women-group.jpg';
+import pairPhoto from '../assets/community/un-women-pair.webp';
+import groupPhoto from '../assets/community/un-women-group.webp';
 import './Community.css';
 
 const photos = [

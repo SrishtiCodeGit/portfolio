@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Community />
       <Achievement />
+      <Community />
       <AvatarShowcase />
       <RunningAvatar />
       <About />
