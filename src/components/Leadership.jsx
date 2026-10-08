@@ -1,4 +1,4 @@
-import { FiAward } from 'react-icons/fi';
+import { FiAward, FiLinkedin } from 'react-icons/fi';
 import Reveal from './Reveal';
 import { riskColor } from '../utils/riskColor';
 import { leadership } from '../data/resumeData';
@@ -21,14 +21,20 @@ export default function Leadership() {
 
         <div className="leadership__grid">
           {leadership.map((item, i) => {
-            const { title, desc } = splitLeadership(item);
+            const entry = typeof item === 'string' ? { text: item } : item;
+            const { title, desc } = splitLeadership(entry.text);
             const color = riskColor(leadership.length > 1 ? i / (leadership.length - 1) : 0);
             return (
-              <Reveal delay={i * 0.06} key={item}>
+              <Reveal delay={i * 0.06} key={entry.text}>
                 <div className="leadership__tile" style={{ '--tile-color': color }}>
                   <FiAward className="leadership__icon" />
                   <p className="leadership__title">{title}</p>
                   {desc && <p className="leadership__desc">{desc}</p>}
+                  {entry.url && (
+                    <a href={entry.url} target="_blank" rel="noreferrer" className="leadership__link">
+                      <FiLinkedin /> View post
+                    </a>
+                  )}
                 </div>
               </Reveal>
             );

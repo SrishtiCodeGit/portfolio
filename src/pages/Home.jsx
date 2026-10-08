@@ -8,12 +8,14 @@ import Projects from '../components/Projects';
 import Blog from '../components/Blog';
 import Skills from '../components/Skills';
 import Leadership from '../components/Leadership';
+import Community from '../components/Community';
 import Contact from '../components/Contact';
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <Community />
       <Achievement />
       <AvatarShowcase />
       <RunningAvatar />

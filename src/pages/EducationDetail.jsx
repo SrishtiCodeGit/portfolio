@@ -48,6 +48,17 @@ export default function EducationDetail() {
           <p className="detail-summary">{edu.summary}</p>
         </motion.div>
 
+        {edu.photo && (
+          <motion.figure
+            className="detail-photo"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.22 }}
+          >
+            <img src={edu.photo} alt={edu.photoAlt} />
+          </motion.figure>
+        )}
+
         <div className="detail-grid">
           <motion.div
             className="detail-card"

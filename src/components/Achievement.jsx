@@ -1,11 +1,24 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiAward, FiArrowUpRight, FiArrowRight, FiGithub } from 'react-icons/fi';
+import { FiAward, FiArrowUpRight, FiArrowRight, FiGithub, FiLinkedin } from 'react-icons/fi';
 import Reveal from './Reveal';
 import LogoBadge from './LogoBadge';
 import YouTubeEmbed from './YouTubeEmbed';
 import { hackathon } from '../data/resumeData';
+import teamPhoto from '../assets/hackathon/team.webp';
+import prizePhoto from '../assets/hackathon/prize.jpg';
+import crowdPhoto from '../assets/hackathon/crowd.webp';
+import demoPhoto from '../assets/hackathon/demo.jpg';
+import silhouettePhoto from '../assets/hackathon/silhouette.jpg';
 import './Achievement.css';
+
+const gallery = [
+  { src: teamPhoto, alt: 'The Breadcrumbs team smiling together at the BuilderBase hackathon', span: 3 },
+  { src: prizePhoto, alt: 'Two teammates holding the Dell prize in front of a BuilderBase backdrop', span: 3 },
+  { src: crowdPhoto, alt: 'Everyone at the hackathon gathered for a group photo', span: 2 },
+  { src: demoPhoto, alt: 'A teammate rehearsing the 90-second demo slide before presenting', span: 2, position: '50% 35%' },
+  { src: silhouettePhoto, alt: 'Four teammates in silhouette against a city skyline window', span: 2 },
+];
 
 export default function Achievement() {
   return (
@@ -66,6 +79,9 @@ export default function Achievement() {
                   <a href={hackathon.githubUrl} target="_blank" rel="noreferrer" className="btn btn--ghost">
                     <FiGithub /> GitHub
                   </a>
+                  <a href={hackathon.linkedinPost} target="_blank" rel="noreferrer" className="btn btn--ghost">
+                    <FiLinkedin /> LinkedIn post
+                  </a>
                   <a href={hackathon.eventUrl} target="_blank" rel="noreferrer" className="achievement__event-link">
                     View Event <FiArrowUpRight />
                   </a>
@@ -79,6 +95,23 @@ export default function Achievement() {
                   title={`${hackathon.projectName} demo video`}
                 />
               </div>
+            </div>
+
+            <div className="achievement__gallery">
+              {gallery.map((photo) => (
+                <figure
+                  className="achievement__photo"
+                  style={{ gridColumn: `span ${photo.span}` }}
+                  key={photo.src}
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    loading="lazy"
+                    style={photo.position ? { objectPosition: photo.position } : undefined}
+                  />
+                </figure>
+              ))}
             </div>
           </div>
         </Reveal>

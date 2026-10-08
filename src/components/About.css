@@ -138,3 +138,15 @@
     grid-template-columns: 1fr;
   }
 }
+
+.edu-card--photo {
+  overflow: hidden;
+}
+
+.edu-card__photo {
+  display: block;
+  width: calc(100% + 56px);
+  margin: -28px -28px 22px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}

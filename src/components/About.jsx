@@ -23,10 +23,20 @@ export default function About() {
               <Reveal delay={i * 0.1} key={edu.school}>
                 <Link to={`/education/${edu.slug}`} className="edu-card-link">
                   <TiltCard
-                    className={`edu-card ${edu.isAlmaMater ? 'edu-card--alma' : ''}`}
+                    className={`edu-card ${edu.isAlmaMater ? 'edu-card--alma' : ''} ${edu.photo ? 'edu-card--photo' : ''}`}
                     maxTilt={6}
                     style={{ '--edu-color': color }}
                   >
+                    {edu.photo && (
+                      <img
+                        src={edu.photo}
+                        alt={edu.photoAlt}
+                        className="edu-card__photo"
+                        loading="lazy"
+                        style={{ objectPosition: edu.photoPosition }}
+                      />
+                    )}
+                    <div className="edu-card__body">
                     <div className="edu-card__top">
                       <LogoBadge name={edu.school} src={edu.logo} size={52} shape="rounded" />
                       <div className="edu-card__head">
@@ -43,6 +53,7 @@ export default function About() {
                     <span className="edu-card__cta">
                       View coursework <FiArrowRight />
                     </span>
+                    </div>
                   </TiltCard>
                 </Link>
               </Reveal>

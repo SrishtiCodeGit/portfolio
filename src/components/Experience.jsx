@@ -1,54 +1,63 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiChevronDown } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 import Reveal from './Reveal';
 import LogoBadge from './LogoBadge';
 import { experience } from '../data/resumeData';
 import './Experience.css';
 
 function ExperienceCard({ exp }) {
-  const [open, setOpen] = useState(false);
+  const photo = exp.photo && (
+    <figure className={`timeline__photo ${exp.photoPortrait ? 'timeline__photo--portrait' : ''}`}>
+      <img src={exp.photo} alt={exp.photoAlt} loading="lazy" />
+    </figure>
+  );
+
+  const details = (
+    <>
+      {exp.promotion && (
+        <div className="promo">
+          <p className="promo__headline"><strong>{exp.promotion.headline}</strong></p>
+          <ol className="promo__steps">
+            {exp.promotion.steps.map((step) => (
+              <li className="promo__step" key={step.title}>
+                <span className="promo__dot" />
+                <span className="promo__label">{step.label}</span>
+                <span className="promo__title">{step.title}</span>
+                <span className="promo__detail">{step.detail}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
+      <ul className="timeline__bullets">
+        {exp.bullets.map((b) => (
+          <li key={b}>{b}</li>
+        ))}
+      </ul>
+    </>
+  );
 
   return (
     <div className="timeline__card">
-      <button
-        type="button"
-        className="timeline__head"
-        onClick={() => setOpen((o) => !o)}
-        aria-expanded={open}
-      >
+      <div className="timeline__head">
         <LogoBadge name={exp.company} src={exp.logo} size={48} shape="rounded" />
         <div className="timeline__headtext">
           <h3>{exp.role}</h3>
           <p className="timeline__company">{exp.company} · {exp.location}</p>
         </div>
         <span className="pill timeline__period">{exp.period}</span>
-        <motion.span
-          className="timeline__chevron"
-          animate={{ rotate: open ? 180 : 0 }}
-          transition={{ duration: 0.25 }}
-        >
-          <FiChevronDown />
-        </motion.span>
-      </button>
+      </div>
 
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="timeline__collapse"
-          >
-            <ul className="timeline__bullets">
-              {exp.bullets.map((b) => (
-                <li key={b}>{b}</li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {exp.photoPortrait ? (
+        <div className="timeline__split">
+          {photo}
+          <div className="timeline__main">{details}</div>
+        </div>
+      ) : (
+        <>
+          {photo}
+          {details}
+        </>
+      )}
     </div>
   );
 }
@@ -60,7 +69,6 @@ export default function Experience() {
         <Reveal>
           <p className="section-label">Experience</p>
           <h2 className="section-title">Where I've <em>Worked</em></h2>
-          <p className="experience__hint">Click a company to see what I worked on.</p>
         </Reveal>
 
         <div className="timeline">

@@ -9,6 +9,10 @@ import nvidiaLogo from '../assets/logos/nvidia.svg';
 import dellLogo from '../assets/logos/dell.svg';
 import builderbaseLogo from '../assets/logos/builderbase.png';
 import srmLogo from '../assets/logos/srm.png';
+import leadsquaredPostPhoto from '../assets/experience/leadsquared-post.jpg';
+import isroLaunchPhoto from '../assets/experience/isro-irnss-launch.jpg';
+import srmGraduationPhoto from '../assets/education/srm-graduation.jpg';
+import columbiaCampusPhoto from '../assets/education/columbia-campus.webp';
 import systemicAiChartImage from '../assets/projects/systemic-ai-chart.png';
 import circleShotImage from '../assets/projects/circle-shot.jpg';
 import elninoShotImage from '../assets/projects/elnino-shot.jpg';
@@ -43,6 +47,7 @@ export const hackathon = {
   tagline: "An always-on food-safety agent that runs entirely offline, built in one day.",
   team: ["Srishti Chauhan", "Alex", "Nick", "Ola", "Richard"],
   slug: "breadcrumbs",
+  linkedinPost: "https://www.linkedin.com/feed/update/urn:li:activity:7498465884093583361/",
   sponsors: [
     { name: "MongoDB", logo: mongodbLogo },
     { name: "NVIDIA", logo: nvidiaLogo },
@@ -61,6 +66,9 @@ export const education = [
     degree: "Master of Science, Enterprise Risk Management",
     note: "F-1, Three-Year STEM OPT Eligible",
     period: "2025 to 2026",
+    photo: columbiaCampusPhoto,
+    photoAlt: "Standing on the lawn in front of Columbia University's Butler Library at dusk",
+    photoPosition: "50% 15%",
     summary: "Graduate coursework spanning financial risk, quantitative analytics, and regulatory frameworks.",
     coursework: [
       "Financial Risk Management",
@@ -87,6 +95,9 @@ export const education = [
     degree: "Bachelor of Technology, Computer Science and Information Technology",
     note: "CGPA 3.5 (Dean's List)",
     period: "2020 to 2024",
+    photo: srmGraduationPhoto,
+    photoAlt: "Graduating in a pink saree, holding a degree certificate in front of the SRM Tech Park building",
+    photoPosition: "50% 0%",
     summary: "Undergraduate degree focused on machine learning, AI modeling, and statistical methods.",
     coursework: [
       "Machine Learning",
@@ -122,6 +133,16 @@ export const experience = [
     location: "Bangalore, India",
     role: "Business Analyst",
     period: "Jun 2024 to May 2025",
+    photo: leadsquaredPostPhoto,
+    photoAlt: "Speaking into a microphone at a LeadSquared session, wearing a LeadSquared lanyard",
+    photoPortrait: true,
+    promotion: {
+      headline: "Promoted within one year: from the education sector to handling Enterprise accounts for USA Professional Services in the healthcare sector.",
+      steps: [
+        { label: "Start", title: "Business Analyst, Education sector", detail: "Jun 2024 · CRM implementations for education clients" },
+        { label: "Within one year", title: "Promoted: Enterprise accounts", detail: "USA Professional Services · Healthcare sector" },
+      ],
+    },
     bullets: [
       "Led 5+ end-to-end enterprise CRM implementations (including Physics Wallah) by developing automated workflow controls that reduced operational risk by 30% and minimized data-entry errors across high-volume accounts.",
       "Mitigated credit and churn risk for distressed accounts through structured resolution frameworks and custom API integrations, restoring client satisfaction and preventing revenue loss.",
@@ -135,6 +156,8 @@ export const experience = [
     location: "Remote, India",
     role: "Data Analyst Intern",
     period: "Jan 2023 to Sep 2023",
+    photo: isroLaunchPhoto,
+    photoAlt: "India's IRNSS-1D navigation satellite lifting off from the Satish Dhawan Space Centre",
     bullets: [
       "Built a remote-sensing predictive framework using JavaScript and Google Earth Engine (GEE), improving agricultural risk forecasting accuracy by 15% with Sentinel-2 satellite imagery.",
       "Applied supervised ML models to NDVI and multi-year temporal datasets for crop yield forecasting and commodity risk analysis.",
@@ -290,6 +313,10 @@ export const leadership = [
   "Portfolio Project, CIFS: Student-managed equity portfolio covering stock screening, investment thesis development, and index benchmarking.",
   "External Relations Manager, Columbia Risk Management Club: Lead industry outreach and engagement with risk and finance professionals.",
   "President, Association for Computing Machinery (ACM): Increased member engagement by 25% through structured initiatives and programming.",
+  {
+    text: "Music Club Convenor, Directorate of Student Affairs (Undergraduate): Developed leadership skills, mentored junior members, and organized events including Milan.",
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7219816399030956032/",
+  },
 ];
 
 export const skills = [

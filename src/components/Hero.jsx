@@ -4,6 +4,7 @@ import { profile } from '../data/resumeData';
 import profilePhoto from '../assets/profile.jpg';
 import columbiaLogo from '../assets/logos/columbia.png';
 import RiskMatrixBg from './RiskMatrixBg';
+import HeroBackdrop from './HeroBackdrop';
 import './Hero.css';
 
 const container = {
@@ -21,6 +22,7 @@ const item = {
 export default function Hero() {
   return (
     <section id="top" className="hero">
+      <HeroBackdrop />
       <div className="hero__glow" />
       <RiskMatrixBg />
       <div className="container hero__inner">
