@@ -44,6 +44,7 @@ export default function Achievement() {
                   {hackathon.event} · {hackathon.eventLocation}
                 </p>
                 <p className="achievement__tagline">{hackathon.tagline}</p>
+                <p className="achievement__role"><strong>My role:</strong> {hackathon.role}</p>
                 <div className="achievement__stats">
                   {hackathon.stats.map((stat) => (
                     <span className="pill" key={stat}>{stat}</span>

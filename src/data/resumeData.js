@@ -45,6 +45,7 @@ export const hackathon = {
   videoId: "_ndw5fS4UO0",
   videoThumb: breadcrumbsThumb,
   tagline: "An always-on food-safety agent that runs entirely offline, built in one day.",
+  role: "Helped design and develop Breadcrumbs.",
   stats: ["Built in 12 hours", "Top 7 finalist"],
   team: ["Srishti Chauhan", "Alex", "Nick", "Ola", "Richard"],
   slug: "breadcrumbs",
