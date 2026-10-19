@@ -18,6 +18,7 @@ import circleShotImage from '../assets/projects/circle-shot.jpg';
 import elninoShotImage from '../assets/projects/elnino-shot.jpg';
 import nlpSpeechImage from '../assets/projects/nlp-speech.jpg';
 import signalNoiseImage from '../assets/projects/signal-noise-shot.jpg';
+import elninoVideoThumb from '../assets/projects/elnino-video-thumb.webp';
 import breadcrumbsThumb from '../assets/projects/breadcrumbs-thumb.jpg';
 
 export const profile = {
@@ -188,6 +189,8 @@ export const projects = [
     linkLabel: "Live App",
     domain: "vercel.app · El Niño Dashboard",
     image: elninoShotImage,
+    videoId: "TxU4PkXBFv0",
+    videoThumb: elninoVideoThumb,
     graphic: "climate",
     tagline: "Turning climate cycles into quantified financial exposure.",
     bullets: [

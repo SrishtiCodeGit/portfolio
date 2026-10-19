@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FiArrowLeft, FiArrowUpRight } from 'react-icons/fi';
 import ProjectGraphic from '../components/ProjectGraphic';
 import BrowserFrame from '../components/BrowserFrame';
+import YouTubeEmbed from '../components/YouTubeEmbed';
 import { projects } from '../data/resumeData';
 import './DetailPage.css';
 
@@ -52,6 +53,22 @@ export default function ProjectDetail() {
             <ProjectGraphic type={project.graphic} />
           </BrowserFrame>
         </motion.div>
+
+        {project.videoId && (
+          <motion.div
+            className="detail-card detail-video"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h3>Project walkthrough</h3>
+            <YouTubeEmbed
+              videoId={project.videoId}
+              thumbnail={project.videoThumb}
+              title={`${project.title} walkthrough`}
+            />
+          </motion.div>
+        )}
 
         <motion.div
           className="detail-card"

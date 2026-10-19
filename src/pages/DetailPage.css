@@ -210,3 +210,8 @@
   border-radius: 16px;
   border: 1px solid var(--border);
 }
+
+.detail-video .yt-embed {
+  margin-top: 14px;
+  border-radius: 12px;
+}
