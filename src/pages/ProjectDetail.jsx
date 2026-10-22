@@ -35,6 +35,7 @@ export default function ProjectDetail() {
         >
           <div className="detail-eyebrow-row">
             <p className="detail-eyebrow">{project.period}</p>
+            {project.status && <span className="pill pill--status">{project.status}</span>}
             {project.companyLogo && (
               <img src={project.companyLogo} alt={project.company} className="detail-company-logo" />
             )}

@@ -159,3 +159,10 @@ button {
     padding: 72px 0;
   }
 }
+
+.pill--status {
+  background: var(--accent-soft);
+  border-color: rgba(180, 83, 9, 0.35);
+  color: var(--accent-strong);
+  font-weight: 600;
+}

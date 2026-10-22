@@ -56,6 +56,7 @@ export default function Projects() {
                   <div className="project-row__text">
                     <div className="project-row__head">
                       <span className="pill">{p.period}</span>
+                      {p.status && <span className="pill pill--status">{p.status}</span>}
                       {p.companyLogo && (
                         <img src={p.companyLogo} alt={p.company} className="project-row__company-logo" />
                       )}
