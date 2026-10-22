@@ -1,3 +1,4 @@
+import samsungLogo from '../assets/logos/samsung.png';
 import './ProjectGraphic.css';
 
 function NetworkGraphic() {
@@ -114,7 +115,26 @@ function LlmGraphic() {
   );
 }
 
+function SamsungAiGraphic() {
+  const heights = [14, 26, 40, 22, 48, 30, 18, 36, 24];
+  return (
+    <div className="pg-samsung">
+      <img src={samsungLogo} alt="Samsung Electronics" className="pg-samsung__logo" />
+      <div className="pg-samsung__row">
+        <div className="pg-samsung__wave" aria-hidden="true">
+          {heights.map((h, i) => (
+            <span key={i} style={{ height: h, animationDelay: `${i * 0.09}s` }} />
+          ))}
+        </div>
+        <span className="pg-samsung__arrow" aria-hidden="true">→</span>
+        <span className="pg-samsung__ai">AI</span>
+      </div>
+    </div>
+  );
+}
+
 const GRAPHICS = {
+  samsungai: SamsungAiGraphic,
   network: NetworkGraphic,
   climate: ClimateGraphic,
   social: SocialGraphic,

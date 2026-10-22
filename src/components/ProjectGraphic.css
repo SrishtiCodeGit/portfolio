@@ -144,3 +144,72 @@
   0%, 100% { opacity: 0.08; }
   50% { opacity: 0.4; }
 }
+
+/* Samsung + AI cover */
+.pg-samsung {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  background: #ffffff;
+}
+
+.pg-samsung__logo {
+  width: min(58%, 190px);
+  height: auto;
+}
+
+.pg-samsung__row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pg-samsung__wave {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 52px;
+}
+
+.pg-samsung__wave span {
+  width: 5px;
+  border-radius: 3px;
+  background: #1428a0;
+  animation: pg-samsung-wave 1.4s ease-in-out infinite;
+}
+
+.pg-samsung__arrow {
+  font-size: 22px;
+  color: var(--text-faint);
+}
+
+.pg-samsung__ai {
+  display: grid;
+  place-items: center;
+  min-width: 58px;
+  height: 58px;
+  padding: 0 14px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1428a0, #3b5bdb);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+@keyframes pg-samsung-wave {
+  0%, 100% { transform: scaleY(0.55); }
+  50% { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pg-samsung__wave span {
+    animation: none;
+  }
+}

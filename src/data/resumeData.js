@@ -16,7 +16,6 @@ import columbiaCampusPhoto from '../assets/education/columbia-campus.webp';
 import systemicAiChartImage from '../assets/projects/systemic-ai-chart.png';
 import circleShotImage from '../assets/projects/circle-shot.jpg';
 import elninoShotImage from '../assets/projects/elnino-shot.jpg';
-import nlpSpeechImage from '../assets/projects/nlp-speech.jpg';
 import signalNoiseImage from '../assets/projects/signal-noise-shot.jpg';
 import simbaHomeImage from '../assets/simba/terminal-home.webp';
 import simbaExplorerImage from '../assets/simba/market-explorer.webp';
@@ -314,8 +313,7 @@ export const projects = [
     noLinkReason: "Private company project · public link not available",
     company: "Samsung",
     companyLogo: samsungLogo,
-    graphic: "llm",
-    image: nlpSpeechImage,
+    graphic: "samsungai",
     tagline: "Boosting transcription accuracy for unstructured speech.",
     bullets: [
       "Developed and optimized CTC-based NLP speech models that improved transcription accuracy by 25% for large-scale unstructured text.",
