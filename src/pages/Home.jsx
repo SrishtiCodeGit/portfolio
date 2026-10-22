@@ -17,11 +17,11 @@ export default function Home() {
       <Hero />
       <Achievement />
       <Community />
+      <Projects />
+      <Experience />
       <AvatarShowcase />
       <RunningAvatar />
       <About />
-      <Experience />
-      <Projects />
       <Blog />
       <Skills />
       <Leadership />
