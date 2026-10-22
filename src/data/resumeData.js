@@ -204,6 +204,26 @@ export const projects = [
     ],
   },
   {
+    slug: "simba-terminal",
+    title: "SIMBA Fund Global Macro Terminal (Beta)",
+    period: "2026",
+    tech: ["Web Dashboard", "Portfolio Analytics", "Market Data", "Vercel"],
+    link: "https://simba-terminal-beta-copy.vercel.app",
+    linkLabel: "Live Beta",
+    domain: "vercel.app · SIMBA Terminal",
+    graphic: "climate",
+    tagline: "A global macro terminal for a student-run fund, in early beta.",
+    bullets: [
+      "Building an early-stage global macro terminal for the SIMBA Fund with a paper portfolio, benchmark comparison, asset allocation and regional exposure views.",
+      "Tracks portfolio return, volatility, Sharpe ratio and max drawdown against the S&P 500, Nasdaq 100 and MSCI World proxies.",
+    ],
+    longDescription: [
+      "The SIMBA Fund terminal is an early-stage, beta-preview dashboard for a global macro fund. It brings the fund's paper portfolio, benchmark comparisons and allocation views into one place.",
+      "The portfolio view reports return, annualized volatility, Sharpe ratio and max drawdown against SPY, QQQ and URTH, alongside asset-class and regional equity allocation. A news panel and an AI daily-brief panel sit next to it.",
+      "This is a beta preview running on sample data: no real prices, no live AI calls, and changes are saved only in the visitor's browser. The live beta is behind a sign-in screen, so a visitor will see a login page first.",
+    ],
+  },
+  {
     slug: "breadcrumbs",
     title: "Breadcrumbs — On-Prem Food-Safety Agent",
     period: "2026",
