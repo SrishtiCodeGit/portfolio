@@ -208,7 +208,7 @@ export const projects = [
     title: "SIMBA Fund Global Macro Terminal (Beta)",
     period: "2026",
     tech: ["Web Dashboard", "Portfolio Analytics", "Market Data", "Vercel"],
-    link: "https://simba-terminal-beta-copy.vercel.app",
+    link: "https://set-up-vercel-p3acr4khu-simba-b933.vercel.app",
     linkLabel: "Live Beta",
     domain: "vercel.app · SIMBA Terminal",
     graphic: "climate",
