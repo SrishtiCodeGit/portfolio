@@ -54,6 +54,22 @@ export default function ProjectDetail() {
           </BrowserFrame>
         </motion.div>
 
+        {project.gallery && (
+          <motion.div
+            className="detail-card"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.19 }}
+          >
+            <h3>Screens</h3>
+            <div className="detail-gallery">
+              {project.gallery.map((shot) => (
+                <img key={shot.src} src={shot.src} alt={shot.alt} loading="lazy" />
+              ))}
+            </div>
+          </motion.div>
+        )}
+
         {project.videoId && (
           <motion.div
             className="detail-card detail-video"
