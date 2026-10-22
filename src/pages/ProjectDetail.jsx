@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiArrowLeft, FiArrowUpRight } from 'react-icons/fi';
+import { FiArrowLeft, FiArrowUpRight, FiYoutube } from 'react-icons/fi';
 import ProjectGraphic from '../components/ProjectGraphic';
 import BrowserFrame from '../components/BrowserFrame';
 import YouTubeEmbed from '../components/YouTubeEmbed';
@@ -126,6 +126,11 @@ export default function ProjectDetail() {
             <span className="detail-link--pending">
               {project.noLinkReason || `${project.linkLabel} link coming soon`}
             </span>
+          )}
+          {project.videoUrl && (
+            <a href={project.videoUrl} target="_blank" rel="noreferrer" className="btn btn--ghost">
+              <FiYoutube /> Watch on YouTube
+            </a>
           )}
           <Link to="/#projects" className="btn btn--ghost">Back to Projects</Link>
         </motion.div>

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiAward, FiArrowUpRight, FiArrowRight, FiGithub, FiLinkedin } from 'react-icons/fi';
+import { FiAward, FiArrowUpRight, FiArrowRight, FiGithub, FiLinkedin, FiYoutube } from 'react-icons/fi';
 import Reveal from './Reveal';
 import LogoBadge from './LogoBadge';
 import YouTubeEmbed from './YouTubeEmbed';
@@ -84,6 +84,9 @@ export default function Achievement() {
                   </Link>
                   <a href={hackathon.githubUrl} target="_blank" rel="noreferrer" className="btn btn--ghost">
                     <FiGithub /> GitHub
+                  </a>
+                  <a href={hackathon.videoUrl} target="_blank" rel="noreferrer" className="btn btn--ghost">
+                    <FiYoutube /> YouTube
                   </a>
                   <a href={hackathon.linkedinPost} target="_blank" rel="noreferrer" className="btn btn--ghost">
                     <FiLinkedin /> LinkedIn post
