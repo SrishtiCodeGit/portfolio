@@ -378,6 +378,29 @@ export const leadership = [
   },
 ];
 
+export const founderships = [
+  {
+    name: "Simba Fund",
+    role: "Co-founder",
+    blurb: "A founder-first venture fund, with a global macro terminal built alongside it.",
+    slug: "simba-terminal",
+    status: "Still building",
+  },
+  {
+    name: "Ledgerlands",
+    role: "Founder",
+    blurb: "A game-style portfolio dashboard that shows what moves your risk, with an AI agent to explain it.",
+    slug: "ledgerlands",
+    status: "In progress",
+  },
+  {
+    name: "Circle",
+    role: "Founder",
+    blurb: "A platform where independent artists find collaborators, gigs and income.",
+    slug: "circle",
+  },
+];
+
 export const skills = [
   {
     category: "Programming & Data",

@@ -9,6 +9,7 @@ import Blog from '../components/Blog';
 import Skills from '../components/Skills';
 import Leadership from '../components/Leadership';
 import Community from '../components/Community';
+import Founder from '../components/Founder';
 import Contact from '../components/Contact';
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Community />
       <Projects />
       <Experience />
+      <Founder />
       <AvatarShowcase />
       <RunningAvatar />
       <About />
