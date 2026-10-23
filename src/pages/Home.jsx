@@ -16,9 +16,9 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Founder />
       <Achievement />
       <Community />
-      <Founder />
       <Projects />
       <About />
       <Experience />
