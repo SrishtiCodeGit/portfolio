@@ -183,7 +183,7 @@ export const experience = [
   },
 ];
 
-export const projects = [
+const projectList = [
   {
     slug: "el-nino-financial-risk-dashboard",
     title: "El Niño Financial Risk Dashboard",
@@ -355,6 +355,21 @@ export const projects = [
   },
 ];
 
+const projectOrder = [
+  "breadcrumbs",
+  "el-nino-financial-risk-dashboard",
+  "ledgerlands",
+  "simba-terminal",
+  "circle",
+  "systemic-ai-exposure-risk",
+  "ctc-nlp-speech-models",
+];
+
+export const projects = [
+  ...projectOrder.map((slug) => projectList.find((p) => p.slug === slug)),
+  ...projectList.filter((p) => !projectOrder.includes(p.slug)),
+];
+
 export const blog = {
   name: "Signal & Noise",
   url: "https://signal-and-noisee.netlify.app",
@@ -384,7 +399,7 @@ export const leadership = [
   },
 ];
 
-export const founderships = [
+const founderList = [
   {
     name: "Simba Fund",
     role: "Co-founder",
@@ -414,6 +429,13 @@ export const founderships = [
     slug: "circle",
     cta: "See the project",
   },
+];
+
+const founderOrder = ["ledgerlands", "simba-terminal", "circle"];
+
+export const founderships = [
+  ...founderOrder.map((slug) => founderList.find((f) => f.slug === slug)),
+  ...founderList.filter((f) => !founderOrder.includes(f.slug)),
 ];
 
 export const skills = [
