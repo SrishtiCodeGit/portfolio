@@ -17,6 +17,7 @@ import systemicAiChartImage from '../assets/projects/systemic-ai-chart.png';
 import circleShotImage from '../assets/projects/circle-shot.jpg';
 import elninoShotImage from '../assets/projects/elnino-shot.jpg';
 import signalNoiseImage from '../assets/projects/signal-noise-shot.jpg';
+import ledgerlandsHomeImage from '../assets/ledgerlands/site-home.webp';
 import simbaHomeImage from '../assets/simba/terminal-home.webp';
 import simbaExplorerImage from '../assets/simba/market-explorer.webp';
 import simbaFundSiteImage from '../assets/simba/fund-website.webp';
@@ -239,10 +240,13 @@ export const projects = [
     period: "2026 to present",
     status: "In progress",
     tech: ["React", "Data Visualization", "Real-time Market Data", "Game Design"],
-    link: "#",
-    linkLabel: "In development",
-    noLinkReason: "Currently in development · no public link yet",
-    domain: "In development · Ledgerlands",
+    link: "https://ledgerlands-site.vercel.app/",
+    linkLabel: "Website",
+    domain: "ledgerlands-site.vercel.app",
+    image: ledgerlandsHomeImage,
+    gallery: [
+      { src: ledgerlandsHomeImage, alt: "Ledgerlands website: money is confusing, so we turn your investments into a living kingdom, with the Steward assistant" },
+    ],
     graphic: "network",
     tagline: "Managing a portfolio should feel like building a clan, not reading a spreadsheet.",
     bullets: [
@@ -252,6 +256,7 @@ export const projects = [
     longDescription: [
       "Most portfolio tools are dense tables that tell people what they own but not why it moves. Ledgerlands is a project I'm building to make that visible: a visually rich, game-style environment where a portfolio becomes a clan you build and grow.",
       "The plan is to roll it out in phases and connect it to real-time market data, so people can see which forces affect their clan, such as rates, sector moves and news, instead of just seeing a number change.",
+      "The Ledgerlands website introduces the idea: money is confusing, so your investments become a living kingdom you can fly over, with a Steward assistant that answers questions and an early-access sign-up.",
       "This is a work in progress. The goal is a tool that helps people build real intuition about risk and diversification, not just another random finance website.",
     ],
   },
@@ -267,6 +272,7 @@ export const projects = [
     videoId: "_ndw5fS4UO0",
     videoThumb: breadcrumbsThumb,
     videoUrl: "https://www.youtube.com/watch?v=_ndw5fS4UO0",
+    deckUrl: "https://gamma.app/docs/BREADCRUMBS-ohetgae279oaxli?mode=doc",
     graphic: "network",
     isHackathonWinner: true,
     tagline: "An always-on food-safety agent that runs entirely offline.",
@@ -394,7 +400,8 @@ export const founderships = [
     role: "Founder",
     status: "In progress",
     vision: "Personal finance people can actually understand. Your portfolio becomes a clan you build, and every move shows its cause, with an AI agent that explains what is happening in plain language.",
-    graphic: "network",
+    image: ledgerlandsHomeImage,
+    imageAlt: "Ledgerlands website: a living kingdom built from your investments",
     slug: "ledgerlands",
     cta: "See the MVP in Projects",
   },

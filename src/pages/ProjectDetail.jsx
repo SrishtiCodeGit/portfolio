@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiArrowLeft, FiArrowUpRight, FiYoutube } from 'react-icons/fi';
+import { FiArrowLeft, FiArrowUpRight, FiYoutube, FiFileText } from 'react-icons/fi';
 import ProjectGraphic from '../components/ProjectGraphic';
 import BrowserFrame from '../components/BrowserFrame';
 import YouTubeEmbed from '../components/YouTubeEmbed';
@@ -87,6 +87,23 @@ export default function ProjectDetail() {
           </motion.div>
         )}
 
+        {project.deckUrl && (
+          <motion.div
+            className="detail-card detail-deck"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.21 }}
+          >
+            <h3>Pitch deck</h3>
+            <p className="detail-paragraph">
+              The full story behind Breadcrumbs: the problem, the five-agent pipeline and what is real versus modeled.
+            </p>
+            <a href={project.deckUrl} target="_blank" rel="noreferrer" className="btn btn--primary">
+              <FiFileText /> Open the pitch deck <FiArrowUpRight />
+            </a>
+          </motion.div>
+        )}
+
         <motion.div
           className="detail-card"
           initial={{ opacity: 0, y: 24 }}
@@ -127,6 +144,11 @@ export default function ProjectDetail() {
             <span className="detail-link--pending">
               {project.noLinkReason || `${project.linkLabel} link coming soon`}
             </span>
+          )}
+          {project.deckUrl && (
+            <a href={project.deckUrl} target="_blank" rel="noreferrer" className="btn btn--ghost">
+              <FiFileText /> Pitch deck
+            </a>
           )}
           {project.videoUrl && (
             <a href={project.videoUrl} target="_blank" rel="noreferrer" className="btn btn--ghost">
