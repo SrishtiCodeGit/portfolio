@@ -18,12 +18,12 @@ export default function Home() {
       <Hero />
       <Achievement />
       <Community />
+      <About />
+      <Founder />
       <Projects />
       <Experience />
-      <Founder />
       <AvatarShowcase />
       <RunningAvatar />
-      <About />
       <Blog />
       <Skills />
       <Leadership />

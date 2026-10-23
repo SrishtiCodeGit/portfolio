@@ -1,6 +1,6 @@
 import './BrowserFrame.css';
 
-export default function BrowserFrame({ domain, image, children }) {
+export default function BrowserFrame({ domain, image, imageAlt = '', children }) {
   return (
     <div className="browser-frame">
       <div className="browser-frame__bar">
@@ -10,7 +10,7 @@ export default function BrowserFrame({ domain, image, children }) {
         {domain && <span className="browser-frame__url">{domain}</span>}
       </div>
       <div className="browser-frame__body">
-        {image ? <img src={image} alt="" className="browser-frame__img" /> : children}
+        {image ? <img src={image} alt={imageAlt} className="browser-frame__img" /> : children}
       </div>
     </div>
   );
